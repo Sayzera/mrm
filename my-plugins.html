@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <style>
+      .border {
+        border-width: 0.5px !important;
+      }
+
+      .dropdown {
+        position: absolute;
+        inset: 0px auto auto 0px;
+        margin: 0px;
+        transform: translate(0px, 42px) !important;
+        width: 100% !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 h-screen">
+    <div class="bg-gray-50 py-3">
+      <div class="container mx-auto">
+        <div
+          class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex justify-between"
+        >
+          <ul class="flex flex-wrap -mb-px">
+            <li class="mr-2">
+              <a
+                href="dashboard.html"
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 border-b-2 border-blue-600 active text-blue-600"
+                >Şablonlarım
+              </a>
+            </li>
+            <li class="mr-2">
+              <a
+                onclick="window.open('my-plugins.html','_self')"
+                href="#"
+                class="inline-block p-4 rounded-t-lg dark:text-blue-500 dark:border-blue-500 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                >Modül Listesi</a
+              >
+            </li>
+          </ul>
+
+          <div class="flex justify-end mt-2">
+            <img src="./assets/logo.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#58B4E2] h-52 flex flex-col justify-center">
+      <div class="container mx-auto md:flex items-center justify-between">
+        <p class="text-5xl font-bold text-white">
+          Satın alma ve sözleşme mödülleri
+        </p>
+
+        <div>
+          <button
+            type="button"
+            class="mt-5 md:mt-0 py-2.5 px-5 mr-2 mb-2 text-medium font-medium text-[#58B4E2] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-[#58B4E2] focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >
+            Modül Oluştur
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-3/6">
+      <div class="pt-16">
+        <div class="container mx-auto h-4/6"></div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./dist/flowbite.js"></script>
+</html>

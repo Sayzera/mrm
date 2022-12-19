@@ -1,0 +1,2865 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <style>
+      .border {
+        border-width: 0.5px !important;
+      }
+
+      .dropdown {
+        position: absolute;
+        inset: 0px auto auto 0px;
+        margin: 0px;
+        transform: translate(0px, 42px) !important;
+        width: 100% !important;
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 4px;
+        cursor: default;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #c7c7c7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Modals -->
+
+    <!-- Helper -->
+
+    <!-- Main modal -->
+    <div
+      id="defaultModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full max-w-2xl h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Yardım Merkezi
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-toggle="defaultModal"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-2">
+            <h5 class="text-md font-semibold text-gray-900 dark:text-white">
+              Faydalı videolar
+            </h5>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Uygulama Nasıl Düzenlenir</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Arayüz Tasarlamak</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>İş Akışı Sekmesi</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Özellik Düzenleyici</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Kullanıcı Kaydı / Giriş Oluşturma</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Uygulamayı Nasıl Yayınlayabilirim</p>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600"
+          >
+            <button
+              data-modal-toggle="defaultModal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+            >
+              Kapat
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END Modals -->
+
+    <!-- Workflow modal -->
+    <div
+      id="workflowModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full max-w-2xl h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-[#283032] text-white"
+          >
+            <h3
+              class="text-md font-semibold text-gray-900 dark:text-white text-white"
+            >
+              Sayfa yüklendiği zaman yapılacak işlemler
+            </h3>
+
+            <!-- header -->
+            <div class="flex items-center space-x-4">
+              <i
+                class="fa-solid fa-circle-question text-xl cursor-pointer text-gray-400 hover:text-gray-300"
+              ></i>
+              <i
+                class="fa-regular fa-comment text-xl text-gray-500 cursor-pointer text-gray-400 hover:text-gray-300"
+                onclick="popupWindow('./part/notes.html', 'Notlar', 600, 500 )"
+              ></i>
+
+              <button
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm inline-flex dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-toggle="workflowModal"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="sr-only">Close modal</span>
+              </button>
+            </div>
+            <!-- END Header -->
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-2 bg-[#5F6568] -mt-1">
+            <div class="flex justify-between items-center">
+              <label
+                for="countries"
+                class="block mb-2 text-sm font-medium text-gray-300 font-semibold dark:text-white w-1/4"
+                >Renk</label
+              >
+
+              <select
+                id="countries"
+                class="w-3/4 bg-[#525759] border border-[#525759] text-white text-sm rounded-lg focus:ring-[#525759] focus:border-[#525759] block w-full p-2.5"
+              >
+                <option selected>Renk Seçiniz</option>
+              </select>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <label
+                for="countries"
+                class="block mb-2 text-sm font-medium text-gray-300 font-semibold dark:text-white w-1/4"
+                >İş Akışı Klasörü</label
+              >
+
+              <select
+                id="countries"
+                class="w-3/4 bg-[#525759] border border-[#525759] text-white text-sm rounded-lg focus:ring-[#525759] focus:border-[#525759] block w-full p-2.5"
+              >
+                <option selected>Renk Seçiniz</option>
+              </select>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <label
+                for="countries"
+                class="block mb-2 text-sm font-medium text-gray-300 font-semibold dark:text-white w-1/4"
+                >Olay Ekle</label
+              >
+
+              <input
+                type="text"
+                id="text"
+                class="w-3/4 bg-[#525759] border border-[#525759] text-white text-sm rounded-lg focus:ring-[#525759] focus:border-[#525759] block w-full p-2.5"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END Modals -->
+
+    <div class="flex border-b border-gray-300 h-10">
+      <!-- Logo -->
+      <div
+        class="cursor-pointer border-r border-r-3 border-gray-500 flex content-center"
+        style="display: flex; align-items: center"
+      >
+        <img
+          src="./assets/logo_11.png"
+          class="w-24 object-contain"
+          alt=""/>
+      </div>
+
+      <!-- search -->
+      <div
+        class="relative 2xl:w-2/12 border-r border-r-3 border-gray-500 flex content-center"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-none border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Sayfa: Anasayfa"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Sayfalar -->
+      <div
+        class="relative 2xl:w-2/12 border-r border-r-3 border-gray-500 flex content-center"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-none border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Anasayfa"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Düzenle -->
+      <div
+        class="w-1/12 border-r border-r-1 cursor-pointer flex justify-items-between content-center h-10 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <span class="text-xs font-semibold pl-2 p-1 w-full text-gray-500"
+          >Düzenle</span
+        >
+        <i
+          class="fa-solid fa-arrow-up-long -rotate-45 pt-1 pr-1 text-gray-500"
+        ></i>
+      </div>
+
+      <!-- Grid & Bordes -->
+      <div
+        class="relative 2xl:w-1/12 border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-none border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Izgara & Kenarlar"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Hazırlıklar -->
+      <div
+        class="relative w-1/12 border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-none border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Hazırlıklar"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Bileşenler -->
+      <div
+        class="relative w-1/12 cursor-pointer border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <span class="text-xs font-semibold pl-8 p-1 w-full text-gray-500"
+          >Bileşenler</span
+        >
+        <i
+          class="fa-solid fa-cube absolute left-1 text-gray-500 text-md font-semibold"
+        ></i>
+      </div>
+
+      <!-- Rotate Left -->
+      <div
+        class="relative cursor-pointer border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <i
+          class="fa-solid fa-rotate-left text-gray-500 text-md font-semibold p-1 px-2"
+        ></i>
+        <i
+          class="fa-solid fa-rotate-right text-gray-300 text-md font-semibold p-1 px-2"
+        ></i>
+      </div>
+
+      <!-- Search  -->
+      <div
+        class="relative cursor-pointer border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass text-gray-500 text-md font-semibold p-1 px-2"
+        ></i>
+      </div>
+
+      <!-- Bitir ve  yayınla -->
+      <div
+        class="relative cursor-pointer w-1/12 text-center bg-[#0205D3] m-0 p-0"
+        style="display: flex; align-items: center"
+      >
+        <span
+          class="text-sm 2xl:text-medium px-2 w-full text-gray-500 text-white bg-[#0205D3]"
+          >Bitir ve Yayınla
+        </span>
+      </div>
+
+      <!-- Bitir ve  yayınla -->
+      <div
+        class="relative cursor-pointer w-1/12 text-center m-0 p-0 group hover:bg-[#0205d3] ml-0.5"
+        style="display: flex; align-items: center"
+      >
+        <span
+          class="2xl:text-medium px-2 w-full text-blue-500 group-hover:text-white"
+          >Önizleme
+        </span>
+      </div>
+
+      <!-- Sorular, Hesap -->
+      <div
+        class="w-1/12 cursor-pointer border-gray-500 flex justify-items-end"
+        style="display: flex; justify-content: end; align-items: center"
+      >
+        <div>
+          <i
+            data-modal-toggle="defaultModal"
+            class="fa-regular fa-circle-question text-gray-500 font-semibold p-1 px-2 text-xl"
+          ></i>
+          <i
+            class="fa-solid fa-circle-user text-gray-500 text-md font-semibold p-1 px-2 text-xl"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <!-- Main Menu-->
+      <div class="w-20 h-screen border border-gray-300">
+        <div class="border-b-1 border-gray-300 border-b">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 text-gray-500 hover:border-blue-500 hover:text-blue-500"
+            onclick="window.open('work.html', '_self')"
+          >
+            <i class="fa-solid fa-pen-ruler text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Tasarım</span>
+          </div>
+        </div>
+
+        <div class="border-b-1 border-gray-300 border-b">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+            onclick="window.open('workflow.html', '_self')"
+          >
+            <i class="fa-solid fa-network-wired text-lg mt-2"></i>
+            <span class="text-sm font-semibold">İş Akışı</span>
+          </div>
+        </div>
+
+        <div class="border-b-1 border-gray-300 border-b">
+          <div
+            onclick="window.open('data.html', '_self')"
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-solid fa-database text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Veriler</span>
+          </div>
+        </div>
+        <div
+          class="border-b-1 border-gray-300 border-b"
+          onclick="window.open('styles.html', '_self')"
+        >
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-solid fa-paintbrush text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Stiller</span>
+          </div>
+        </div>
+
+        <div
+          class="border-b-1 border-gray-300 border-b"
+          onclick="window.open('plugins.html', '_self')"
+        >
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-solid fa-plug-circle-bolt text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Eklentiler</span>
+          </div>
+        </div>
+        <div
+          class="border-b-1 border-gray-300 border-b"
+          onclick="window.open('settings.html', '_self')"
+        >
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 border-blue-500 text-blue-500"
+          >
+            <i class="fa-solid fa-gear text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Ayarlar</span>
+          </div>
+        </div>
+        <div class="border-b-1 border-gray-300 border-b" onclick="window.open('logs.html', '_self')">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-regular fa-note-sticky text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Loglar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-9-12 p-3 w-full">
+        <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+          <ul
+            class="flex flex-wrap -mb-px text-sm font-medium text-center"
+            id="myTab"
+            data-tabs-toggle="#myTabContent"
+            role="tablist"
+          >
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2"
+                id="profile-tab"
+                data-tabs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                Uygulama Planı
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="dashboard-tab"
+                data-tabs-target="#dashboard"
+                type="button"
+                role="tab"
+                aria-controls="dashboard"
+                aria-selected="false"
+              >
+                Genel
+              </button>
+            </li>
+            <li class="mr-2" role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="settings-tab"
+                data-tabs-target="#settings"
+                type="button"
+                role="tab"
+                aria-controls="settings"
+                aria-selected="false"
+              >
+                Etki Alanı / E-Posta
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="contacts-tab"
+                data-tabs-target="#contacts"
+                type="button"
+                role="tab"
+                aria-controls="contacts"
+                aria-selected="false"
+              >
+                Diller
+              </button>
+            </li>
+
+            <li role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="seo-meta-tab"
+                data-tabs-target="#seo-meta"
+                type="button"
+                role="tab"
+                aria-controls="seo-meta"
+                aria-selected="false"
+              >
+                SEO / Meta Etiketler
+              </button>
+            </li>
+
+            <li role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="api-tab"
+                data-tabs-target="#api"
+                type="button"
+                role="tab"
+                aria-controls="api"
+                aria-selected="false"
+              >
+                API
+              </button>
+            </li>
+
+            <li role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="isbirligi-tab"
+                data-tabs-target="#isbirligi"
+                type="button"
+                role="tab"
+                aria-controls="isbirligi"
+                aria-selected="false"
+              >
+                İşbirliği
+              </button>
+            </li>
+
+
+            <li role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="altuygulamalar-tab"
+                data-tabs-target="#altuygulamalar"
+                type="button"
+                role="tab"
+                aria-controls="altuygulamalar"
+                aria-selected="false"
+              >
+                Alt Uygulamalar
+              </button>
+            </li>
+
+            <li role="presentation">
+              <button
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="versiyonlar-tab"
+                data-tabs-target="#versiyonlar"
+                type="button"
+                role="tab"
+                aria-controls="versiyonlar"
+                aria-selected="false"
+              >
+                Versiyonlar
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="myTabContent">
+          <!-- Uygulama Planı-->
+          <div
+            class="hidden p-4 bg-white rounded-lg dark:bg-gray-800 w-[70%]"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <!-- Uygulama Planı -->
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3"
+            >
+              <span class="text-xl font-semibold">Uygulama Planı</span>
+
+              <button
+                type="button"
+                class="py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded-lg border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                Uygulama Planı Oluştur
+              </button>
+            </div>
+            <!-- Uygulama Planı -->
+            <div class="bg-gray-50 p-4 mt-8">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-md font-semibold">Ücretsiz Plan</span>
+                </div>
+
+                <div class="flex flex-col justify-end items-end space-y-2">
+                  <span class="text-md font-semibold">0 ₺ / Ay</span>
+                  <span class="text-sm text-gray-500"
+                    >Mevcut uygulama planı</span
+                  >
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="text-sm text-gray-500">Planınız şunları içerir</div>
+
+                <div class="flex justify-between mt-3 2xl:w-[60%]">
+                  <div>
+                    <div class="flex items-center space-x-3 mb-2">
+                      <i class="fa-solid fa-check"></i>
+                      <span class="text-sm font-semibold"
+                        >Parola koruması: Yalnızca düzenleyici</span
+                      >
+                    </div>
+
+                    <div class="flex items-center space-x-3 mb-2">
+                      <i class="fa-solid fa-check"></i>
+                      <span class="text-sm font-semibold"
+                        >Topluluk desteği</span
+                      >
+                    </div>
+
+                    <div class="flex items-center space-x-3 mb-2">
+                      <i class="fa-solid fa-check"></i>
+                      <span class="text-sm font-semibold"
+                        >Temel sunucu kapasitesi</span
+                      >
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center space-x-3 mb-2">
+                      <i class="fa-solid fa-check"></i>
+                      <span class="text-sm font-semibold"
+                        >1 uygulama editörü</span
+                      >
+                    </div>
+
+                    <div class="flex items-center space-x-3 mb-2">
+                      <i class="fa-solid fa-check"></i>
+                      <span class="text-sm font-semibold"
+                        >30 dakikalık günlükler</span
+                      >
+                    </div>
+
+                    <div class="flex items-center space-x-3 mb-2">
+                      <i class="fa-solid fa-check"></i>
+                      <span class="text-sm font-semibold"
+                        >0.5 GB dosya depolama</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 text-gray-500 text-sm">
+              Hesabınız, ücretli bir plana kaydolmak için son kullanma tarihi
+              2/2027 olan XXXX ile biten visa kartı kullanabilir <br />
+              Ödeme yöntemlerinizi değiştirmek için
+              <a href="#" class="text-blue-500">buraya</a> tıklayın.
+            </div>
+
+            <div class="mt-7 mb-6">
+              <p
+                class="pb-3 border-gray-300 border-b text-xl font-semibold text-gray-900"
+              >
+                Kapasite Artışı
+              </p>
+            </div>
+
+            <p class="text-gray-500">
+              Uygulamanıza kapasite eklemenin faydasını ayda üç defaya kadar
+              test edebilirsiniz.
+            </p>
+            <p class="text-gray-500">
+              Şu anda bir destek kullanmıyorsunuz. Geçen ay
+              <span class="text-blue-500">0 boost</span> kullandınız ve bu ay
+              bunu <span>3 kez daha yapabilirsiniz</span>
+            </p>
+
+            <div class="border-gray-200 p-5 border mt-5">
+              <div class="flex items-center space-x-6 py-8">
+                <span class="text-gray-800">Kapasite Artışı</span>
+                <input
+                  id="small-range"
+                  type="range"
+                  value="0"
+                  disabled
+                  class="h-1 flex-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700"
+                />
+                <span class="text-gray-800"
+                  >Sonraki saat için uygulamama 5 birim ekle</span
+                >
+              </div>
+
+              <div class="flex justify-end pb-2">
+                <button
+                  type="button"
+                  class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-500 focus:outline-none bg-white rounded-lg border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Yükseltmeyi onaylayın!
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <div
+                class="pb-3 border-gray-300 border-b text-xl font-semibold text-gray-900"
+              >
+                Ek kapasite ve depolama
+              </div>
+            </div>
+
+            <p class="mt-5 text-gray-500">
+              Bu plan kapsamında daha fazla kapasite ekleyemezsiniz. Bunu yapmak
+              için lütfen daha yüksek bir plana geçin.
+            </p>
+
+            <div class="mt-5">
+              <div
+                class="pb-3 border-gray-300 border-b text-xl font-semibold text-gray-900"
+              >
+                Ücretli Eklentiler
+              </div>
+            </div>
+
+            <p class="mt-5 text-gray-500">
+              Bu plan kapsamında daha fazla kapasite ekleyemezsiniz. Bunu yapmak
+              için lütfen daha yüksek bir plana geçin.
+            </p>
+          </div>
+
+          <!-- Genel  -->
+          <div
+            class="hidden p-4 bg-white rounded-lg dark:bg-gray-800 h-screen"
+            id="dashboard"
+            role="tabpanel"
+            aria-labelledby="dashboard-tab"
+          >
+            <div
+              class="h-5/6 overflow-y-auto px-1 w-[90%] 2xl:w-full"
+              id="genelTap"
+            >
+              <div
+                class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5"
+              >
+                <span class="text-xl font-semibold">Gizlilik ve Güvenlik</span>
+              </div>
+
+              <div>
+                <p class="text-gray-800">Uygulama hakları</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-gray-800 mt-2">
+                    Uygulamayı kimlerin görebileceğini ve değiştirebileceğini
+                    tanımlayın
+                  </p>
+                  <select
+                    id="countries"
+                    class="w-44 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option selected>Herkes düzenleyebilir</option>
+                    <option value="US">Herkes görebilir</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                >
+                  <div>
+                    <p class="text-gray-800 font-semibold">
+                      Noca düzenleyicinizi ve çalıştırma modunuzu koruyan
+                      parola, ücretli özelliklerdir
+                    </p>
+                    <p class="text-blue-500 text-sm">
+                      Bu özelliğe erişim için planınızı yükseltin.
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Bu özelliğe erişmek için yükseltin
+                  </button>
+                </div>
+
+                <div
+                  class="border border-gray-200 p-5 flex items-center justify-between"
+                >
+                  <p class="text-gray-800">
+                    Bir kullanıcı adı ve şifre ile bu uygulamaya erişimi
+                    sınırlayın
+                  </p>
+
+                  <input
+                    id="checked-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+              </div>
+
+              <div class="py-7">
+                <div class="flex items-center justify-between mb-5">
+                  <p class="text-gray-800">Bir şifre politikası tanımlayın</p>
+
+                  <input
+                    id="checked-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <p class="text-gray-800 mt-3">
+                    Parolasını değiştirmemiş kullanıcıları yeniden yönlendirin
+                  </p>
+
+                  <select
+                    id="countries"
+                    class="w-52 bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option></option>
+                    <option value="US">Dizin</option>
+                    <option value="CA">Yeni bir sayfa oluştur</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                >
+                  <div>
+                    <p class="text-gray-800 font-semibold">
+                      İki faktörlü kimlik doğrulamanın etkinleştirilmesi, Üretim
+                      planında mevcuttur
+                    </p>
+                    <p class="text-blue-500 text-sm">
+                      Bu özelliğe erişim için planınızı yükseltin.
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Bu özelliğe erişmek için yükseltin
+                  </button>
+                </div>
+
+                <div
+                  class="border border-gray-200 p-5 flex items-center justify-between"
+                >
+                  <p class="text-gray-800">
+                    İki faktörlü kimlik doğrulamayı etkinleştirin
+                  </p>
+
+                  <input
+                    id="checked-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+              </div>
+
+              <div class="py-7">
+                <div class="flex items-center justify-between mb-3">
+                  <p class="text-gray-800">
+                    Uygulamanın bir çerçeve/iframe içinde işlenmesine izin ver
+                    (X-Frame-Options)
+                  </p>
+                  <select
+                    id="countries"
+                    class="w-52 bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option>Tüm çerçeveleri engelle</option>
+                  </select>
+                </div>
+                <div class="flex items-center justify-between mb-5">
+                  <p class="text-gray-800">
+                    Varsayılan olarak yeni ziyaretçiler için çerez ayarlayın
+                  </p>
+
+                  <input
+                    id="checked-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+              </div>
+
+              <!-- Logo -->
+              <div>
+                <div
+                  class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                >
+                  <div>
+                    <p class="text-gray-800 font-semibold">
+                      Noca düzenleyicinizi ve çalıştırma modunuzu koruyan
+                      parola, ücretli özelliklerdir
+                    </p>
+                    <p class="text-blue-500 text-sm">
+                      Bu özelliğe erişim için planınızı yükseltin.
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Bu özelliğe erişmek için yükseltin
+                  </button>
+                </div>
+
+                <div
+                  class="border border-gray-200 px-5 pt-4 pb-10 flex items-center justify-between"
+                >
+                  <span class="font-medium">Favicon</span>
+
+                  <div class="border border-gray-200 w-28 h-28">
+                    <img
+                      src="./assets/logo_2.png"
+                      class="w-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- renkler -->
+              <div>
+                <div class="my-4 flex-col space-y-3">
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium">İlerleme çubuğu rengi</p>
+
+                    <div
+                      class="flex space-x-3 items-center p-2 border-gray-200 border w-52"
+                    >
+                      <div class="h-4 w-5 bg-blue-500"></div>
+                      <div>#0205D3</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="my-4 flex-col space-y-3">
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium">Yinelenen grup döndürücü rengi</p>
+
+                    <div
+                      class="flex space-x-3 items-center p-2 border-gray-200 border w-52"
+                    >
+                      <div class="h-4 w-5 bg-blue-500"></div>
+                      <div>#0205D3</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between mb-5">
+                  <p class="text-gray-800">
+                    HTML öğelerine bir kimlik özelliği ekleme seçeneğini
+                    gösterin
+                  </p>
+
+                  <input
+                    id="checked-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <p class="text-xl font-semibold pb-4 border-gray-200 border-b">
+                  Genel hizmetler API Anahtarları
+                </p>
+
+                <div>
+                  <p class="text-gray-800 mt-2">
+                    Bu bölüm, Noca'ın güvendiği bazı hizmetler için kendi API
+                    anahtarlarınızı girmenizi sağlar.
+                  </p>
+                </div>
+
+                <div class="flex justify-between items-center mt-4">
+                  <p class="w-4/12 text-gray-800">
+                    Google Geocode API anahtarı
+                    <span class="text-gray-500 text-sm">(Belge)</span>
+                  </p>
+
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="w-8/12 block w-full p-2 pl-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div class="flex justify-between items-center mt-4">
+                  <p class="w-4/12 text-gray-800">
+                    Google Harita API anahtarı
+                    <span class="text-gray-500 text-sm">(Belge)</span>
+                  </p>
+
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="w-8/12 block w-full p-2 pl-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div class="flex items-center justify-between mt-4">
+                  <p class="text-gray-800">
+                    Uygulama, harita yüklemeleri için hız sınırlı olduğunda
+                    e-posta göndermeyin
+                  </p>
+
+                  <input
+                    id="checked-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+
+                <div class="mt-4 flex items-center justify-between">
+                  <div>
+                    <p class="text-gray-800">
+                      Algolia ile aramayı etkinleştirmek için profesyonel bir
+                      plana veya daha yüksek bir plana yükseltin
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Bu özelliğe erişmek için yükseltin
+                  </button>
+                </div>
+              </div>
+
+              <!-- İOS Görünümü -->
+              <div>
+                <div class="mt-4">
+                  <p
+                    class="text-gray-800 text-xl font-semibold pb-4 border-b border-gray-300"
+                  >
+                    İOS Görünümü
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mb-5 mt-4">
+                <p class="text-gray-800">Safari UI bileşenini gizle</p>
+
+                <input
+                  id="checked-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+
+              <div class="flex items-center justify-between mb-5">
+                <p class="text-gray-800">
+                  Kullanıcının yakınlaştırma yapmasını engelle
+                </p>
+
+                <input
+                  id="checked-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+
+              <div class="flex items-center justify-between mb-5">
+                <p class="text-gray-800">
+                  iPhone 5 başlangıç ​​resmi (640 x 1096 piksel)
+                </p>
+
+                <div
+                  class="border border-gray-300 w-20 h-20 flex flex-col justify-center items-center rounded-md"
+                >
+                  <i class="fa-solid fa-cloud-arrow-up text-gray-700"></i>
+                  <span class="text-gray-800">Yükle</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mb-5">
+                <p class="text-gray-800">
+                  iPad başlangıç ​​resmi (portre, 1536 x 2008 piksel)
+                </p>
+
+                <div
+                  class="border border-gray-300 w-20 h-20 flex flex-col justify-center items-center rounded-md"
+                >
+                  <i class="fa-solid fa-cloud-arrow-up text-gray-700"></i>
+                  <span class="text-gray-800">Yükle</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mb-5">
+                <p class="text-gray-800">
+                  iPad başlangıç ​​resmi (yatay, 1496 x 2048 piksel)
+                </p>
+
+                <div
+                  class="border border-gray-300 w-20 h-20 flex flex-col justify-center items-center rounded-md"
+                >
+                  <i class="fa-solid fa-cloud-arrow-up text-gray-700"></i>
+                  <span class="text-gray-800">Yükle</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mb-5">
+                <p class="text-gray-800">
+                  iPad başlangıç ​​resmi (yatay, 1496 x 2048 piksel)
+                </p>
+
+                <div
+                  class="border border-gray-300 w-20 h-20 flex flex-col justify-center items-center rounded-md"
+                >
+                  <i class="fa-solid fa-cloud-arrow-up text-gray-700"></i>
+                  <span class="text-gray-800">Yükle</span>
+                </div>
+              </div>
+              <!-- İOS Görünümü -->
+
+              <!-- Özel Yazı tipleri-->
+              <div>
+                <div class="mt-4">
+                  <p
+                    class="text-gray-800 text-xl font-semibold pb-4 border-b border-gray-300"
+                  >
+                    Özel Yazı Tipleri
+                  </p>
+                </div>
+
+                <div
+                  class="p-4 py-8 border-gray-300 border rounded-sm flex items-center justify-between bg-gray-50 space-x-14 mt-8"
+                >
+                  <div class="flex items-center space-x-2 w-1/3">
+                    <span class="w-20">Yazı Tipi</span>
+                    <input
+                      type="search"
+                      id="default-search"
+                      class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+
+                  <div class="flex items-center space-x-2 w-1/3">
+                    <span class="w-50">Css Dosya Yolu</span>
+                    <input
+                      type="search"
+                      id="default-search"
+                      class="w-[70%] block p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+
+                  <div class="flex items-center justify-end w-1/3">
+                    <button
+                      type="button"
+                      class="w-1/2 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      Yazı tipi ekle
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Özel Yazı tipleri-->
+
+              <!-- Renk Paleti -->
+              <div>
+                <div class="mt-8">
+                  <p
+                    class="text-gray-800 text-xl font-semibold pb-4 border-b border-gray-300"
+                  >
+                    Renk Paleti
+                  </p>
+                </div>
+
+                <p class="mt-4">
+                  Renk değişkenleri, gelişmiş işlevsellik için renk paletinin
+                  yerini alacaktır. Bunları Stiller Sekmesinde
+                  düzenleyebilirsiniz.
+                </p>
+                <p class="text-[#2729D9] cursor-pointer">
+                  Varsayılan renk değişkenlerini düzenle
+                </p>
+
+                <div class="mt-4 flex items-center space-x-5">
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+                  <div
+                    class="flex items-center p-2 py-1 border border-gray-200 w-44 space-x-2"
+                  >
+                    <span class="bg-[#2729D9] w-4 h-4"></span>
+                    <span>#03B4C6</span>
+                  </div>
+
+                  <div>
+                    <p class="text-gray-400">Paleti Sıfırla</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Renk Paleti End -->
+
+              <!-- Tasarımı İçe Aktarma -->
+              <div class="mt-8">
+                <p
+                  class="text-gray-800 text-xl font-semibold pb-4 border-b border-gray-300"
+                >
+                  Tasarımı İçe Aktarma
+                </p>
+
+                <div class="mt-4">
+                  <p>
+                    Tasarım dosyalarını
+                    <span class="text-blue-800 underline">Figma'dan </span> noca
+                    uygulamanıza buradan aktarabilirsiniz. noca uygulamanıza
+                    buradan aktarabilirsiniz. Not: İşlem sırasında tüm resimler,
+                    uygulamanızın dosya depolama alanı kullanılarak Noca'a
+                    kopyalanacaktır.
+                  </p>
+                </div>
+
+                <div
+                  class="p-4 py-8 border-gray-300 border rounded-sm flex items-center justify-between bg-gray-50 space-x-14 mt-8"
+                >
+                  <div class="flex items-center space-x-2 w-1/3">
+                    <span class="w-36">Api Anahtarı</span>
+                    <input
+                      type="search"
+                      id="default-search"
+                      class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+
+                  <div class="flex items-center space-x-2 w-1/3">
+                    <span class="w-50">Figma Dosya Kimliği</span>
+                    <input
+                      type="search"
+                      id="default-search"
+                      class="w-[70%] block p-2 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+
+                  <div class="flex items-center justify-end w-1/3">
+                    <button
+                      type="button"
+                      class="w-1/2 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      İçe Aktar
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Tasarımı içe aktarma -->
+
+              <!-- Uygulama Dosya Yönetimi -->
+              <div class="mt-8">
+                <p
+                  class="text-gray-800 text-xl font-semibold pb-4 border-b border-gray-300"
+                >
+                  Uygulama Dosya Türü
+                </p>
+
+                <p class="mt-4">
+                  Noca uygulamaları, uygulamayı zamanla büyüten kullanılmayan
+                  öğeler içerebilir. Daha iyi performans için kullanılmayan
+                  özellikleri temizlemek için buraya tıklayın.
+                </p>
+
+                <div class="flex items-center space-x-4 mt-4">
+                  <button
+                    type="button"
+                    class="w-1/4 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-500 focus:outline-none bg-white rounded-lg border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Uygulamayı optimize et
+                  </button>
+                  <button
+                    type="button"
+                    class="w-1/4 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-500 focus:outline-none bg-white rounded-lg border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Uygulama geçmişini temizle
+                  </button>
+                </div>
+              </div>
+              <!-- Uygulama Dosya Yönetimi-->
+
+              <!-- JSON -->
+              <div>
+                <div
+                  class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                >
+                  <div>
+                    <p class="text-gray-800 font-semibold">
+                      Uygulamanızı JSON olarak içe ve dışa aktarma, ücretli
+                      planlarda mevcuttur
+                    </p>
+                    <p class="text-blue-500 text-sm">
+                      Bu özelliğe erişim için planınızı yükseltin.
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Bu özelliğe erişmek için yükseltin
+                  </button>
+                </div>
+
+                <div
+                  class="border border-gray-200 p-5 flex items-center space-x-3 pb-20 pt-5"
+                >
+                  <button
+                    type="button"
+                    class="w-1/4 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-500 focus:outline-none bg-white rounded-lg border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Uygulamayı dışa aktar
+                  </button>
+
+                  <button
+                    type="button"
+                    class="w-1/4 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-500 focus:outline-none bg-white rounded-lg border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Uygulamayı içe aktar
+                  </button>
+                </div>
+              </div>
+
+              <!-- JSON -->
+            </div>
+          </div>
+
+          <!-- Etki Alanı-->
+          <div
+            class="hidden p-4 bg-white rounded-lg dark:bg-gray-800"
+            id="settings"
+            role="tabpanel"
+            aria-labelledby="settings-tab"
+          >
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5"
+            >
+              <span class="text-xl font-semibold">Etki alanı ayarları</span>
+            </div>
+
+            <div>
+              <div
+                class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+              >
+                <div>
+                  <p class="text-gray-800 font-semibold">
+                    Kendi alan adınızı kullanmak yalnızca ücretli planlarda
+                    mevcuttur
+                  </p>
+                  <p class="text-blue-500 text-sm">
+                    Bu özelliğe erişim için planınızı yükseltin.
+                  </p>
+                </div>
+
+                <button
+                  disabled
+                  type="button"
+                  class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Bu özelliğe erişmek için yükseltin
+                </button>
+              </div>
+
+              <div
+                class="border border-gray-200 p-5 flex justify-center flex-col"
+              >
+                <div class="flex items-center w-[50%] space-x-4">
+                  <span class="w-2/4">Alan Adı</span>
+                  <input
+                    type="text"
+                    id="email"
+                    class="w-2/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="örnek.com"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="w-2/4 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-400 focus:outline-none bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Bu etki alanını kur
+                  </button>
+                </div>
+
+                <div class="mt-4">
+                  <p class="text-gray-700">
+                    Bir alan adı seçin ve BU ALAN ALANINI AYARLAYIN'a tıklayın.
+                  </p>
+                  <p class="text-gray-700">
+                    Bu, alanı Noca'ya kaydedecek ve alanınızı uygulamanıza
+                    yönlendirmek için ihtiyacınız olan şeyi sağlayacaktır.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+                >
+                  <span class="text-xl font-semibold">E mail ayarları</span>
+                </div>
+
+                <p class="text-gray-700">
+                  E-posta davranışını özelleştirmeden önce bir etki alanı
+                  oluşturmanız gerekir
+                </p>
+              </div>
+
+              <div>
+                <div
+                  class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+                >
+                  <span class="text-xl font-semibold"
+                    >SSL şifrelemesi (HTTPS)</span
+                  >
+                </div>
+
+                <p class="text-gray-700">
+                  SSL şifrelemesini etkinleştirmeden önce bir etki alanı
+                  oluşturmanız gerekir
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Diller -->
+          <div
+            class="hidden p-4 bg-white rounded-lg dark:bg-gray-800"
+            id="contacts"
+            role="tabpanel"
+            aria-labelledby="contacts-tab"
+          >
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5"
+            >
+              <span class="text-xl font-semibold">Genel Ayarlar</span>
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <span class="text-gray-800">Uygulama birincil dili</span>
+              <select
+                id="countries"
+                class="w-52 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option selected>Türkçe (tr)</option>
+                <option>İngilizce (en)</option>
+                <option>Almanca (de)</option>
+                <option>Fransızca (fr)</option>
+                <option>İspanyolca (es)</option>
+                <option>İtalyanca (it)</option>
+                <option>Portekizce (pt)</option>
+                <option>Rusça (ru)</option>
+                <option>Çince (zh)</option>
+                <option>Japonca (ja)</option>
+                <option>Korece (ko)</option>
+              </select>
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <span class="text-gray-800">Kullanıcı türündeki dil alanı</span>
+              <select
+                id="countries"
+                class="w-52 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              ></select>
+            </div>
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-10"
+            >
+              <span class="text-xl font-semibold"
+                >Uygulama metinleri ve mesajları</span
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <span class="text-gray-800">Yeni bir uygulama metni oluştur</span>
+              <button
+                type="button"
+                class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                Metin Oluştur
+              </button>
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <span class="text-gray-800"
+                >Çeviri yapılandırmasını CSV'ye Aktar / İçe Aktar</span
+              >
+              <div>
+                <button
+                  type="button"
+                  class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Dışa Aktar
+                </button>
+                <button
+                  type="button"
+                  class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                 İçe Aktar
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <span class="text-gray-800"
+                >Şu anda mesajları ve metinleri düzenliyorsunuz</span
+              >
+              <select
+                id="countries"
+                class="w-52 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option selected>Türkçe (tr)</option>
+                <option>İngilizce (en)</option>
+                <option>Almanca (de)</option>
+                <option>Fransızca (fr)</option>
+                <option>İspanyolca (es)</option>
+                <option>İtalyanca (it)</option>
+                <option>Portekizce (pt)</option>
+                <option>Rusça (ru)</option>
+                <option>Çince (zh)</option>
+                <option>Japonca (ja)</option>
+                <option>Korece (ko)</option>
+              </select>
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-gray-800 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi
+              </p>
+
+              <textarea
+                id="message"
+                rows="2"
+                class="w-1/2 block p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              >
+ We encountered a temporary error validating your code.  Please wait a minute or two and try again.</textarea
+              >
+            </div>
+          </div>
+          <!--Diller End-->
+
+          <!-- SEO / Meta etiketler-->
+          <div
+            class="hidden p-4 bg-white rounded-lg dark:bg-gray-800 h-screen"
+            id="seo-meta"
+            role="tabpanel"
+            aria-labelledby="seo-meta-tab"
+          >
+            <div class="overflow-y-auto h-[100%]">
+              <div
+                class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5"
+              >
+                <span class="text-xl font-semibold">
+                  Sosyal Medya / Grafik Ayarları</span
+                >
+              </div>
+
+              <div>
+                <div
+                  class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                >
+                  <div>
+                    <p class="text-gray-800 font-semibold">
+                      Sosyal meta etiketler, uygulamanızın ücretli planlarda
+                      bulunan canlı sürümüne uygulanır
+                    </p>
+                    <p class="text-blue-500 text-sm">
+                      Bu özelliğe erişim için planınızı yükseltin.
+                    </p>
+                  </div>
+
+                  <button
+                    disabled
+                    type="button"
+                    class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Bu özelliğe erişmek için yükseltin
+                  </button>
+                </div>
+
+                <div
+                  class="border border-gray-200 p-5 flex justify-center flex-col"
+                >
+                  <div class="flex items-center justify-between mb-2">
+                    <span>Başlık</span>
+                    <input
+                      type="text"
+                      id="email"
+                      class="w-1/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      value="En güçlü kodsuz platform"
+                      required
+                    />
+                  </div>
+
+                  <div class="flex items-center justify-between mb-2">
+                    <span>Site Adı</span>
+                    <input
+                      type="text"
+                      id="email"
+                      class="w-1/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      value="Niltek Yazılım "
+                      required
+                    />
+                  </div>
+
+                  <div class="flex items-center justify-between mb-2">
+                    <span>Tanıtım</span>
+                    <textarea
+                      id="message"
+                      rows="3"
+                      class="block p-2.5 w-1/4 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Write your thoughts here..."
+                    >
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam e</textarea
+                    >
+                  </div>
+
+                  <div class="flex items-center justify-between mb-2 mt-4">
+                    <span>Bağlantılar için kullanılan küçük resim</span>
+
+                    <div class="flex flex-col items-center">
+                      <img
+                        src="./assets/logo_1.png"
+                        class="w-32 rounded-md"
+                        alt=""
+                      />
+
+                      <div>
+                        <p class="text-gray-500 cursor-pointer">
+                          Resmi test et / Yenile
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+                >
+                  <span class="text-xl font-semibold"> Seo Ayarları</span>
+                </div>
+
+                <div>
+                  <div
+                    class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                  >
+                    <div>
+                      <p class="text-gray-800 font-semibold">
+                        SEO ayarları, uygulamanızın ücretli planlarda bulunan
+                        canlı sürümüne uygulanır
+                      </p>
+                      <p class="text-blue-500 text-sm">
+                        Bu özelliğe erişim için planınızı yükseltin.
+                      </p>
+                    </div>
+
+                    <button
+                      disabled
+                      type="button"
+                      class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      Bu özelliğe erişmek için yükseltin
+                    </button>
+                  </div>
+
+                  <div
+                    class="border border-gray-200 p-5 flex justify-center flex-col"
+                  >
+                    <div>
+                      <div class="flex items-center justify-between mb-2">
+                        <p>Metin öğeleri için etiketlerin türünü gösterin</p>
+
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-7 h-7 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                      </div>
+
+                      <div class="flex items-center justify-between mb-2">
+                        <p>
+                          Daha iyi SEO için URL'leri birincil alana yönlendirin
+                        </p>
+
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-7 h-7 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                      </div>
+
+                      <div class="flex items-center justify-between mb-2">
+                        <p>robots.txt dosyasını özelleştirin (gelişmiş)</p>
+
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-7 h-7 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                      </div>
+
+                      <div class="flex items-center justify-between mb-2">
+                        <p>Bir site haritası dosyasını açığa çıkarın</p>
+
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-7 h-7 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between mb-2">
+                      <span>Başlık</span>
+                      <input
+                        type="text"
+                        id="email"
+                        class="w-1/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        value="En güçlü kodsuz platform"
+                        required
+                      />
+                    </div>
+
+                    <div class="flex items-center justify-between mb-2">
+                      <span>Site Adı</span>
+                      <input
+                        type="text"
+                        id="email"
+                        class="w-1/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        value="Niltek Yazılım "
+                        required
+                      />
+                    </div>
+
+                    <div class="flex items-center justify-between mb-2">
+                      <span>Tanıtım</span>
+                      <textarea
+                        id="message"
+                        rows="3"
+                        class="block p-2.5 w-1/4 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Write your thoughts here..."
+                      >
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam e</textarea
+                      >
+                    </div>
+
+                    <div class="flex items-center justify-between mb-2 mt-4">
+                      <span>Bağlantılar için kullanılan küçük resim</span>
+
+                      <div class="flex flex-col items-center">
+                        <img
+                          src="./assets/logo_1.png"
+                          class="w-32 rounded-md"
+                          alt=""
+                        />
+
+                        <div>
+                          <p class="text-gray-500 cursor-pointer">
+                            Resmi test et / Yenile
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <p class="border-b border-gray-300 pb-4">
+                        Gelişmiş Ayarlar
+                      </p>
+                    </div>
+
+                    <div class="mt-4 flex justify-between">
+                      <span class="w-[20%]"
+                        >Başlıktaki komut dosyası/meta etiketleri</span
+                      >
+                      <textarea
+                        id="message"
+                        rows="4"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      ></textarea>
+                    </div>
+
+                    <div class="mt-4 flex justify-between">
+                      <span class="w-[20%]">Body komut dosyası</span>
+                      <textarea
+                        id="message"
+                        rows="4"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+                >
+                  <span class="text-xl font-semibold">
+                    301 Yönlendirmeleri</span
+                  >
+                </div>
+                <div>
+                  <div
+                    class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                  >
+                    <div>
+                      <p class="text-gray-800 font-semibold">
+                        301 yönlendirmeleri ücretli planlarda mevcuttur
+                      </p>
+                      <p class="text-blue-500 text-sm">
+                        Bu özelliğe erişim için planınızı yükseltin.
+                      </p>
+                    </div>
+
+                    <button
+                      disabled
+                      type="button"
+                      class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      Bu özelliğe erişmek için yükseltin
+                    </button>
+                  </div>
+
+                  <div
+                    class="border border-gray-200 p-5 flex justify-center flex-col"
+                  >
+                    <p>
+                      301 Yönlendirmeleri, önceki URL'leri yenilerine
+                      yönlendirir. Başka bir platformdan geçiş yaparken bunu
+                      kullanın.
+                    </p>
+                    <p class="my-4">
+                      Yeniden yönlendirmenin çalışması için bu URL'lerin
+                      uygulamada bulunmayan sayfalara işaret etmesi gerekir. Bu
+                      gelişmiş bir özelliktir.
+                    </p>
+
+                    <div
+                      class="flex items-center w-[50%] space-x-4 bg-gray-100 p-6 rounded"
+                    >
+                      <div
+                        class="flex items-center justify-between space-x-3 w-1/2"
+                      >
+                        <span>URL'den</span>
+                        <input
+                          type="text"
+                          id="email"
+                          class="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder=""
+                          required
+                        />
+                      </div>
+
+                      <div
+                        class="flex items-center justify-between space-x-3 w-1/2"
+                      >
+                        <span>URL'ye</span>
+                        <input
+                          type="text"
+                          id="email"
+                          class="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder=""
+                          required
+                        />
+                      </div>
+
+                      <button
+                        type="button"
+                        class="py-2.5 px-5 mr-2 w-30 text-sm font-medium text-blue-400 focus:outline-none bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                      >
+                        Kaydet
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+                >
+                  <span class="text-xl font-semibold">
+                    Dosyaları kök dizinde barındırma</span
+                  >
+                </div>
+                <!-- Dosyaları kök dizinde barındırma-->
+                <div>
+                  <div
+                    class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+                  >
+                    <div>
+                      <p class="text-gray-800 font-semibold">
+                        Dosyaları kök dizinde barındırma yalnızca ücretli
+                        planlarda mevcuttur
+                      </p>
+                      <p class="text-blue-500 text-sm">
+                        Bu özelliğe erişim için planınızı yükseltin.
+                      </p>
+                    </div>
+
+                    <button
+                      disabled
+                      type="button"
+                      class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      Bu özelliğe erişmek için yükseltin
+                    </button>
+                  </div>
+
+                  <div
+                    class="border border-gray-200 p-5 flex justify-center flex-col"
+                  >
+                    <p>
+                      Barındırılan kök dosyalar, alaniniz.com/dosyaadınız
+                      adresindeki bir dosyayı açığa çıkarmanıza izin verir.
+                    </p>
+                    <p class="my-4">
+                      Bu, alan adının size ait olduğunu kanıtlamak veya mobil
+                      cihazlarda belirli özellikleri etkinleştirmek için yararlı
+                      olabilir.
+                    </p>
+
+                    <div
+                      class="flex items-center w-[50%] space-x-4 bg-gray-100 p-6 rounded"
+                    >
+                      <div
+                        class="flex items-center justify-between space-x-3 w-1/2"
+                      >
+                        <span>Dosya adı</span>
+                        <input
+                          type="text"
+                          id="email"
+                          class="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder=""
+                          required
+                        />
+                      </div>
+
+                      <div
+                        class="flex items-center justify-between space-x-3 w-1/2"
+                      >
+                        <span>Dosya</span>
+                        <input
+                          type="file"
+                          id="file"
+                          class="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder=""
+                          required
+                        />
+                      </div>
+
+                      <button
+                        type="button"
+                        class="py-2.5 px-5 mr-2 w-30 text-sm font-medium text-blue-400 focus:outline-none bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                      >
+                        Kaydet
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Api -->
+          <div
+            class="hidden p-4 bg-white rounded-lg dark:bg-gray-800 h-screen"
+            id="api"
+            role="tabpanel"
+            aria-labelledby="api-tab"
+          >
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+            >
+              <span class="text-xl font-semibold"> Genel API uç noktaları</span>
+            </div>
+
+            <div class="w-1/2">
+              <div class="flex items-center justify-between mb-3">
+                <p>İş Akışı API'sini ve arka uç iş akışlarını etkinleştirin</p>
+                <input
+                  id="checked-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-7 h-7 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+
+              <div class="flex items-center justify-between mb-3">
+                <p>Data API'yi Etkinleştir</p>
+                <input
+                  id="checked-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-7 h-7 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+
+              <div class="flex items-center justify-between mb-3">
+                <p>Swagger API dokümantasyon erişimini gizle</p>
+                <input
+                  id="checked-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-7 h-7 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+            >
+              <span class="text-xl font-semibold">
+                3. Taraf OAuth / SAML Erişimi</span
+              >
+            </div>
+
+            <div class="flex items-center justify-between w-1/2">
+              <p>TOA/OAuth yönlendirmeleri için giriş sayfası</p>
+              <select
+                id="countries"
+                class="w-1/2 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option selected></option>
+              </select>
+            </div>
+
+            <button
+              type="button"
+              class="w-1/5 py-2.5 px-5 mr-2 mb-2 mt-8 text-sm font-medium text-blue-500 focus:outline-none bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Yeni bir 3.taraf uygulaması ekleyin
+            </button>
+
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+            >
+              <span class="text-xl font-semibold">SSO Ayarları</span>
+            </div>
+
+            <div>
+              <div
+                class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+              >
+                <div>
+                  <p class="text-gray-800 font-semibold">
+                    Söylem SSO'sunun ayarlanması yalnızca Profesyonel plan ve
+                    sonraki sürümlerde mevcuttur
+                  </p>
+                  <p class="text-blue-500 text-sm">
+                    Bu özelliğe erişim için planınızı yükseltin.
+                  </p>
+                </div>
+
+                <button
+                  disabled
+                  type="button"
+                  class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Bu özelliğe erişmek için yükseltin
+                </button>
+              </div>
+
+              <div
+                class="border border-gray-200 p-5 flex justify-center flex-col"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <span>Temel URL</span>
+                  <input
+                    type="text"
+                    id="email"
+                    class="w-1/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required
+                  />
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>SSO Güvenlik</span>
+                  <input
+                    type="text"
+                    id="email"
+                    class="w-1/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required
+                  />
+                </div>
+
+                <div class="flex items-center justify-between mb-2">
+                  <span>supres_welcome_message bayrağı</span>
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-7 h-7 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+
+                <div class="flex items-center justify-between mb-2">
+                  <span>
+                    request_activation bayrağı (e-posta onaylanmadıysa kontrol
+                    edilmelidir)</span
+                  >
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-7 h-7 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </div>
+
+                <div class="flex items-center justify-between mb-2 mt-4">
+                  <span>Hesap oluştururken varsayılan avatar</span>
+
+                  <div class="flex flex-col items-center">
+                    <img
+                      src="./assets/logo_1.png"
+                      class="w-32 rounded-md"
+                      alt=""
+                    />
+
+                    <div>
+                      <p class="text-gray-500 cursor-pointer">
+                        Resmi test et / Yenile
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between border-b border-gray-300 pb-3 mb-8 mt-5"
+              >
+                <span class="text-xl font-semibold"> Gelişmiş</span>
+              </div>
+
+              <button
+                type="button"
+                class="py-2.5 px-5 mr-2 mb-8 text-sm font-medium text-blue-400 focus:outline-none bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                Herkese açık JSON Web Anahtarı indirin
+              </button>
+            </div>
+          </div>
+
+          <!-- İş birliği -->
+          <div
+            class="hidden p-4 bg-white rounded-lg dark:bg-gray-800 h-screen"
+            id="isbirligi"
+            role="tabpanel"
+            aria-labelledby="isbirligi-tab"
+          >
+            <div
+              class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+            >
+              <span class="text-xl font-semibold">
+                Bu uygulamayı düzenleyen kullanıcılar
+              </span>
+            </div>
+
+           <p class="text-gray-800 border-b border-gray-300 pb-8">Diğer Noca kullanıcılarıyla işbirliği yapın ve hangi erişimlere sahip olduklarını kontrol edin.</p>
+
+           <div class="flex items-center space-x-6 p-3 justify-between border-b border-gray-300 pb-7">
+              <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-user text-gray-400"></i>
+                <p>lisans@niltekyazilim.com.tr</p>
+              </div>
+
+               <div class="flex items-center space-x-3">
+               
+                <div class="flex items-center space-x-3">
+                  <p>Admin</p>
+                  <input id="default-checkbox" disabled checked type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                </div>
+  
+                <div class="flex items-center space-x-3 ">
+                  <p>Uygulama</p>
+                  <select disabled id="countries" class="w-44 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="">Görüntüle ve Düzenle</option>
+                  </select>
+                </div>
+
+                <div class="flex items-center space-x-3 ">
+                  <p>Veri</p>
+                  <select disabled id="countries" class="w-44 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="">Görüntüle ve Düzenle</option>
+                  </select>
+                </div>
+
+                <div class="flex items-center space-x-3 ">
+                  <p>Logs</p>
+                  <select disabled id="countries" class="w-44 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="">Görüntüle ve Düzenle</option>
+                  </select>
+                </div>
+
+
+                <p>Durum: Geliştirme Versiyonu</p>
+               </div>
+           </div> 
+
+           <div
+           class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+         >
+           <span class="text-xl font-semibold">
+            Bir kullanıcıyı davet et
+           </span>
+         </div>
+           <div>
+            
+            <div
+              class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+            >
+              <div>
+                <p class="text-gray-800 font-semibold">
+                  Ortak çalışan ekleme, Profesyonel plan ve sonraki sürümlerde mevcuttur
+                </p>
+                <p class="text-blue-500 text-sm">
+                  Bu özelliğe erişim için planınızı yükseltin.
+                </p>
+              </div>
+
+              <button
+                disabled
+                type="button"
+                class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                Bu özelliğe erişmek için yükseltin
+              </button>
+            </div>
+
+            
+
+            <div
+              class="border border-gray-200 p-5 flex justify-center flex-col"
+            >
+              <div class="flex items-center w-[50%] space-x-4 bg-gray-100 p-5 rounded">
+                <span class="w-2/4">Bir kullanıcı davet edin (e-posta)</span>
+                <input
+                  type="text"
+                  id="email"
+                  class="w-2/4 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="örnek.com"
+                  required
+                />
+                <button
+                  type="button"
+                  class="w-1/4 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-400 focus:outline-none bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Davet Et
+                </button>
+
+                <button
+                type="button"
+                class="w-1/4 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-400 focus:outline-none bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                Aktar
+              </button>
+              </div>
+
+              <div class="mt-7 flex items-center justify-between">
+                <p>Uygulamayı değiştirdiklerinde diğer düzenleyicilerin imlecini göster</p>
+                <input id="default-checkbox" type="checkbox" checked disabled value="" class="w-7 h-7 text-gray-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+
+              </div>
+            </div>
+
+         
+
+          
+          </div>
+
+
+          </div>
+
+          <!-- iş birliği end-->
+
+          <!-- Alt Uygulamalar-->
+          <div
+          class="hidden p-4 bg-white rounded-lg dark:bg-gray-800 h-screen"
+          id="altuygulamalar"
+          role="tabpanel"
+          aria-labelledby="altuygulamalar-tab"
+        >
+          <div>
+            <div class="flex items-center justify-between space-x-4">
+              <div
+              class="flex flex-col justify-center  border-b border-gray-300 pb-3 mb-5 mt-7 w-full"
+            >
+              <span class="text-xl font-semibold"> Alt uygulamalar</span>
+              <p class="mt-4">Bu uygulamanın henüz herhangi bir alt uygulaması yok.</p>
+            </div>
+
+            <div
+            class="flex flex-col justify-center border-b border-gray-300 pb-3 mb-5 mt-7 w-full"
+          >
+            <span class="text-xl font-semibold"> Alt uygulama oluşturun </span>
+            <p class="mt-4">Bu uygulamanın henüz herhangi bir alt uygulaması yok.</p>
+
+          </div>
+            </div>
+
+
+
+            <div>
+              
+              <div
+                class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+              >
+                <div>
+                  <p class="text-gray-800 font-semibold">
+                    Alt uygulamalar, Üretim planında ve üzerinde mevcuttur.
+                  </p>
+                  <p class="text-blue-500 text-sm">
+                    Bu özelliğe erişim için planınızı yükseltin.
+                  </p>
+                </div>
+
+                <button
+                  disabled
+                  type="button"
+                  class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Bu özelliğe erişmek için yükseltin
+                </button>
+              </div>
+
+              
+
+              <div
+                class="border border-gray-200 p-5 flex justify-center flex-col justify-center"
+              >
+                <div class="flex items-center w-[70%] space-x-4 bg-gray-100 p-5 rounded ">
+                <div class="flex items-center space-x-2 w-1/3">
+                  <span class="" >Uygulama ismi</span>
+                  <input
+                    type="text"
+                    id="email"
+                    class="w-64 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="örnek.com"
+                    required
+                  />
+                </div>
+
+                <div class="flex items-center space-x-5">
+                  <span class="" >Oluşturmak için DB'yi kopyala</span>
+                  <input id="default-checkbox" type="checkbox" value="" checked disabled class="w-7 h-7 text-gray-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+
+                </div>
+
+            
+
+                  <button
+                    type="button"
+                    class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-400 focus:outline-none bg-white rounded-lg border border-gray-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Oluşturmak
+                  </button>
+
+              
+                </div>
+
+            
+              </div>
+
+          
+
+            
+            </div>
+
+
+            
+          </div>
+          
+        </div>
+          <!-- Alt uygulamalar-->
+
+
+          <!-- Versiyonlar -->
+          <div
+          class="hidden p-4 bg-white rounded-lg dark:bg-gray-800 h-screen"
+          id="versiyonlar"
+          role="tabpanel"
+          aria-labelledby="versiyonlar-tab"
+        >
+          <div
+          class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-4"
+          >
+          <span class="text-xl font-semibold">
+          Noca yayın katmanı
+          </span>
+          </div>
+
+          <div>
+              
+            <div
+              class="border-t border-l border-r border-gray-200 rounded px-4 py-7 mt-5 bg-gray-50 flex items-center justify-between"
+            >
+              <div>
+                <p class="text-gray-800 font-semibold">
+                  Planlanmış sürümler, Profesyonel plan ve üzeri sürümlerde kullanılabilir                </p>
+                <p class="text-blue-500 text-sm">
+                  Bu özelliğe erişim için planınızı yükseltin.
+                </p>
+              </div>
+
+              <button
+                disabled
+                type="button"
+                class="w-58 py-2.5 px-5 mr-2 mb-2 text-sm font-semibold text-blue-500 focus:outline-none bg-white rounded border border-blue-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                Bu özelliğe erişmek için yükseltin
+              </button>
+            </div>
+
+            
+
+            <div
+              class="border border-gray-200 p-5 flex justify-center flex-col "
+            >
+              
+            <p>Bu uygulama için Noca platformunda yapılan güncellemeler için sürüm katmanı</p>
+          
+            </div>
+
+
+            <div
+            class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+            >
+            <span class="text-xl font-semibold">
+              Kullanılabilir Noca Engine sürümleri ve güncel sürüm
+            </span>
+            </div>
+
+            <div>
+              <p class="text-gray-800">Bu uygulama şu anda Noca Engine'in  X. sürümündedir (Açılır pencerelerin artık gösterilen sıraya göre atanmış bir z dizini vardır. Tarih/saat girişi, takvim düğmelerinde seçili yazı tipini kullanır) .</p>
+              <p class="text-gray-800 mt-3">Bu uygulama Noca'ın son sürümünde, tebrikler!</p>
+            </div>
+
+
+            <div
+          class="flex items-center justify-between border-b border-gray-300 pb-3 mb-5 mt-7"
+          >
+          <span class="text-xl font-semibold">
+          Deneysel Özellikler (gelişmiş)
+          </span>
+          </div>
+
+          <p>
+            Şu anda geliştirme aşamasında olan ve kararlı bir sürümün parçası olmayan özelliklere erişin;<br> bunları istediğiniz zaman açıp kapatabilirsiniz.
+          </p>
+          
+
+          <div>
+            
+<div class="overflow-x-auto relative shadow-md sm:rounded-lg w-1/2 mt-6">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+            <th scope="col" class="p-4">
+                <div class="flex items-center">
+                    <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                </div>
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Başlangıç
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Bitiş
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Özellik Ayrıntıları
+            </th>
+            <th scope="col" class="py-3 px-6">
+               Geri bildirim
+            </th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td class="p-4 w-4">
+                <div class="flex items-center">
+                    <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                </div>
+            </td>
+            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                04/05/2021
+            </th>
+            <td class="py-4 px-6">
+                04/05/2021
+            </td>
+            <td class="py-4 px-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deleniti laudantium voluptatibus consectetur dolorem amet delectus iusto culpa quasi ducimus omnis, quo voluptas vero mollitia dolores accusantium natus tempore labore?
+            </td>
+           
+        
+         
+            <td class="flex items-center py-4 px-6 space-x-3 cursor-pointer">
+              Geribilidirm gönder
+            </td>
+        </tr>
+
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <td class="p-4 w-4">
+              <div class="flex items-center">
+                  <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+              </div>
+          </td>
+          <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              04/05/2021
+          </th>
+          <td class="py-4 px-6">
+              04/05/2021
+          </td>
+          <td class="py-4 px-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deleniti laudantium voluptatibus consectetur dolorem amet delectus iusto culpa quasi ducimus omnis, quo voluptas vero mollitia dolores accusantium natus tempore labore?
+          </td>
+         
+      
+       
+          <td class="flex items-center py-4 px-6 space-x-3 cursor-pointer">
+            Geribilidirm gönder
+          </td>
+      </tr>
+
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+        <td class="p-4 w-4">
+            <div class="flex items-center">
+                <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+            </div>
+        </td>
+        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            04/05/2021
+        </th>
+        <td class="py-4 px-6">
+            04/05/2021
+        </td>
+        <td class="py-4 px-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deleniti laudantium voluptatibus consectetur dolorem amet delectus iusto culpa quasi ducimus omnis, quo voluptas vero mollitia dolores accusantium natus tempore labore?
+        </td>
+       
+    
+     
+        <td class="flex items-center py-4 px-6 space-x-3 cursor-pointer">
+          Geribilidirm gönder
+        </td>
+    </tr>
+
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+      <td class="p-4 w-4">
+          <div class="flex items-center">
+              <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+          </div>
+      </td>
+      <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          04/05/2021
+      </th>
+      <td class="py-4 px-6">
+          04/05/2021
+      </td>
+      <td class="py-4 px-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deleniti laudantium voluptatibus consectetur dolorem amet delectus iusto culpa quasi ducimus omnis, quo voluptas vero mollitia dolores accusantium natus tempore labore?
+      </td>
+     
+  
+   
+      <td class="flex items-center py-4 px-6 space-x-3 cursor-pointer">
+        Geribilidirm gönder
+      </td>
+  </tr>
+ 
+    </tbody>
+</table>
+
+ 
+</div>
+
+          </div>
+
+          
+          </div>
+        </div>
+          <!-- Versiyonlar -->
+        </div>  
+      </div>
+    </div>
+  </body>
+  <script src="./dist/flowbite.js"></script>
+
+  <script>
+    function popupWindow(url, title, w, h) {
+      var left = screen.width / 2 - w / 2;
+      var top = screen.height / 2 - h / 2;
+
+      return window.open(
+        url,
+        title,
+        "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" +
+          w +
+          ", height=" +
+          h +
+          ", top=" +
+          top +
+          ", left=" +
+          left
+      );
+    }
+
+    // document ready vanila js
+    // document.addEventListener("DOMContentLoaded", function (event) {
+    //   let genelTab = document.getElementById("versiyonlar-tab");
+    //   genelTab.click();
+    //   //  setTimeout(() => {
+    //   //   let area =  document.getElementById('genelTap');
+    //   //    // sayfanın en altına git
+    //   //     area.scrollTop = area.scrollHeight;
+    //   //  }, 100);
+    // });
+  </script>
+</html>

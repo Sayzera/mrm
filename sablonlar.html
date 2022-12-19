@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <link href="/dist/output.css" rel="stylesheet">
+
+
+    <style>
+      .border {
+        border-width: 0.5px !important;
+      }
+
+      .dropdown {
+        position: absolute;
+        inset: 0px auto auto 0px;
+        margin: 0px;
+        transform: translate(0px, 42px) !important;
+        width: 100% !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 h-screen">
+    
+    <nav
+      class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+    >
+      <div
+        class=" 2xl:container flex flex-wrap items-center justify-between mx-auto"
+      >
+        <a href="#" class="flex items-center">
+          <img
+            src="./assets/logo_1.png"
+            class="h-6 mr-3 sm:h-10"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            >NOCA</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul
+            class="flex items-center flex-col p-4 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <div class="flex items-center space-x-2">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent text-lg"
+                >
+                  Ürünler
+                </button>
+                <i class="fa-solid fa-caret-down text-xl text-gray-700"></i>
+              </div>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Özellikler</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Mobil Tasarım</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Pazaryeri</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Güvenlik</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 text-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Fiyatlandırma</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 text-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Vitrin</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 text-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Akademi</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 text-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >İletişim</a
+              >
+            </li>
+
+            <li>
+              <div
+                class="flex items-center space-x-4 bg-[#00C2CB] p-2 rounded text-white px-5"
+              >
+                <i class="fa-solid fa-bars text-xl"></i>
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbarMenu"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 ark:hover:bg-gray-700 md:dark:hover:bg-transparent text-lg"
+                >
+                  Menü
+                </button>
+              </div>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbarMenu"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Uygulamalarım</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Eklentilerim</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Şablonlarım</a
+                    >
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                    >Çıkış Yap</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bg-gray-50 py-3">
+      <div class="container mx-auto">
+        <div
+          class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700"
+        >
+          <ul class="flex flex-wrap -mb-px">
+            <li class="mr-2">
+              <a
+                href="#"
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300  "
+                onclick="window.open('dashboard.html','_self')"
+                >Uygulamalar</a
+              >
+            </li>
+            <li class="mr-2">
+              <a
+                href="#"
+                class="inline-block p-4 rounded-t-lg  hover:text-gray-600 border-b hover:border-gray-300 dark:hover:text-gray-300"
+                onclick="window.open('my-plugins.html','_self')"
+                >Eklentiler</a
+              >
+            </li>
+            <li class="mr-2">
+              <a
+               onclick="window.open('sablonlar.html','_self')"
+
+                href="#"
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent  dark:text-blue-500 dark:border-blue-500   border-blue-600 border-b-2 text-blue-500" 
+                >Şablonlar</a
+              >
+            </li>
+            <li class="mr-2">
+              <a
+                href="#"
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                >Kaynaklar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#00C2CB] h-52 flex flex-col justify-center">
+      <div class="container mx-auto md:flex items-center justify-between">
+        <p class="text-5xl font-bold text-white">Benim Şablonlarım</p>
+
+        <div>
+          <button
+            type="button"
+            class="mt-5 md:mt-0 py-2.5 px-5 mr-2 mb-2 text-medium font-medium text-[#00C2CB] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-[#00C2CB] focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >
+            Şablon Oluştur
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-3/6">
+        <div class="pt-16" >
+            <div class="container mx-auto h-4/6">
+                <p class="text-4xl font-bold">Henüz şablon yok!</p>
+                <p class="text-gray-800 pt-4 font-medium">Şablonlar, Noca uygulamalarına ek öğeler, eylemler ve API'ler eklemenizi sağlar. Bunları Javascript veya görsel düzenleyicimizle oluşturun. 
+                </p>
+                <p class="text-gray-800 pt-4 font-medium">Şablonlar isteğe bağlı olarak Noca Pazaryerin de yayınlayabilirsiniz.
+                </p>
+            </div>
+    
+        </div>
+    </div>
+  
+
+
+
+
+    <footer class="mt-5 bg-white ">
+      <div class="container mx-auto p-5">
+          <div class="flex  justify-around ">
+              <div>
+                  <p class="font-semibold">Keşfetmek</p>
+
+                  <ul class="mt-3">
+                      <li class="mt-2">
+                          <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Özellikler</a>
+                      </li>
+                      <li class="mt-2">
+                          <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Vitrin</a>
+                      </li>
+                      <li class="mt-2">
+                        <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Fiyatlandırma</a>
+                      </li>
+                      <li class="mt-2">
+                        <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Nasıl inşa edilir</a>
+                      </li>
+                      <li class="mt-2">
+                        <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">S.S.S</a>
+                      </li>
+              </div>
+
+              <div>
+                <p class="font-semibold">Ürün</p>
+
+                <ul class="mt-3">
+                    <li class="mt-2">
+                        <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Mobil Tasarım</a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Akademi</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Özellik dizini</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Entegrasyonlar</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Güvenlik</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Yayınlama</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Durum</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Fikir Panosu</a>
+                    </li>
+             </div>
+             <div>
+              <p class="font-semibold">Ekosistem</p>
+
+              <ul class="mt-3">
+                  <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Pazar Yeri</a>
+                  </li>
+                  <li class="mt-2">
+                      <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Şablonlar</a>
+                  </li>
+                  <li class="mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Eklentiler</a>
+                  </li>
+                  <li class="mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Ajanslar</a>
+                  </li>
+                  <li class="mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Eğitim Kampları</a>
+                  </li>
+                  <li class="mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Ortaklıklar</a>
+                  </li>
+                  <li class="mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Eğitim</a>
+                  </li>
+              
+          </div>
+
+          <div>
+            <p class="font-semibold">Topluluk</p>
+
+            <ul class="mt-3">
+                <li class="mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Forum</a>
+                </li>
+                <li class="mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Blog</a>
+                </li>
+                <li class="mt-2">
+                  <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Linkedin</a>
+                </li>
+                <li class="mt-2">
+                  <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Twitter</a>
+                </li>
+                <li class="mt-2">
+                  <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Facebook</a>
+                </li>
+                <li class="mt-2">
+                  <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Youtube</a>
+                </li>
+            
+        </div>
+
+
+        <div>
+          <p class="font-semibold">Şirket</p>
+
+          <ul class="mt-3">
+              <li class="mt-2">
+                  <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Hakkında</a>
+              </li>
+              <li class="mt-2">
+                  <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Kariyer</a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Değerler</a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Marka Yönergeleri</a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Destek</a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Bize ulaşın</a>
+              </li>
+          
+      </div>
+
+          </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="./dist/flowbite.js"></script>
+</html>

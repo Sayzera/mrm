@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <style>
+      .border {
+        border-width: 0.5px !important;
+      }
+
+      .dropdown {
+        position: absolute;
+        inset: 0px auto auto 0px;
+        margin: 0px;
+        transform: translate(0px, 42px) !important;
+        width: 100% !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50">
+    <div class="bg-gray-50 py-3">
+      <div class="container mx-auto">
+        <div
+          class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex justify-between"
+        >
+          <ul class="flex flex-wrap -mb-px">
+            <li class="mr-2">
+              <a
+                href="#"
+                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 border-b-2 border-blue-600 active text-blue-600"
+                >Şablonlarım
+              </a>
+            </li>
+            <li class="mr-2">
+              <a
+                onclick="window.open('my-plugins.html','_self')"
+                href="#"
+                class="inline-block p-4 rounded-t-lg dark:text-blue-500 dark:border-blue-500 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                >Modül Listesi</a
+              >
+            </li>
+          </ul>
+
+          <div class="flex justify-end mt-2">
+            <img src="./assets/logo.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#58B4E2] h-52 flex flex-col justify-center">
+      <div class="container mx-auto md:flex items-center justify-between">
+        <p class="text-5xl font-bold text-white">
+          Satınalma ve Sözleşme Yönetimleri
+        </p>
+
+        <div>
+          <button
+            type="button"
+            onclick="window.open('workflow.html', '_self')"
+            class="mt-5 md:mt-0 py-2.5 px-5 mr-2 mb-2 text-medium font-medium text-[#58B4E2] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-[#58B4E2] focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >
+            Şablon Oluştur
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="relative mt-5">
+        <div
+          class="absolute inset-y-0 right-2 flex items-center pl-3 pointer-events-none"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5 text-gray-500 dark:text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+        </div>
+        <input
+          type="search"
+          id="default-search"
+          class="block w-full p-4 pl-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Şablon Arama"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="container mx-auto border-b border-gray-200 pb-10">
+      <div class="flex items-center space-x-4 mt-6 justify-between">
+        <div class="w-1/2 flex space-x-5">
+          <div class="w-1/2">
+            <select
+              id="countries_multiple"
+              class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option selected>Etiket Seç</option>
+            </select>
+          </div>
+
+          <div class="w-1/2">
+            <select
+              id="countries_multiple"
+              class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option selected>Son Güncellenme Tarihi</option>
+            </select>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="w-44 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        >
+          Aramayı Temizle
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="mt-4 container mx-auto flex items-center justify-between flex-wrap mb-10"
+    >
+      <div
+        class="w-full md:w-[32%] bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-3"
+      >
+        <a href="#">
+          <img class="rounded-t-lg" src="./assets/project2.webp" alt="" />
+        </a>
+        <div class="p-5 mt-4">
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Açık İhale Yönetimi
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            29.11.2022 17.38
+          </p>
+        </div>
+        <div class="bg-gray-100 p-3 flex items-center justify-around">
+          <i
+            class="fa-solid fa-pencil text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-regular fa-copy text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-share-nodes text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-trash-can text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-oil-well text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+        </div>
+      </div>
+
+      <div
+        class="w-full md:w-[32%] bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-3"
+      >
+        <a href="#">
+          <img class="rounded-t-lg" src="./assets/project2.webp" alt="" />
+        </a>
+        <div class="p-5 mt-4">
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Davetiye Usulü İhale Yönetimi
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            29.11.2022 17.38
+          </p>
+        </div>
+
+        <div class="bg-gray-100 p-3 flex items-center justify-around">
+          <i
+            class="fa-solid fa-pencil text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-regular fa-copy text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-share-nodes text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-trash-can text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-oil-well text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+        </div>
+      </div>
+
+      <div
+        class="w-full md:w-[32%] bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-3"
+      >
+        <a href="#">
+          <img class="rounded-t-lg" src="./assets/project2.webp" alt="" />
+        </a>
+        <div class="p-5 mt-4">
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Doğrudan Temin Yönetimi
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            29.11.2022 17.38
+          </p>
+        </div>
+
+        <div class="bg-gray-100 p-3 flex items-center justify-around">
+          <i
+            class="fa-solid fa-pencil text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-regular fa-copy text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-share-nodes text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-trash-can text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+          <i
+            class="fa-solid fa-oil-well text-2xl text-gray-700 cursor-pointer hover:text-gray-600"
+          ></i>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./dist/flowbite.js"></script>
+</html>

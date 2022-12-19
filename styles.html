@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <link href="/dist/output.css" rel="stylesheet">
+
+
+    <style>
+     
+      .border {
+        border-width: 0.5px !important;
+      }
+
+      .dropdown {
+        position: absolute;
+        inset: 0px auto auto 0px;
+        margin: 0px;
+        transform: translate(0px, 42px) !important;
+        width: 100% !important;
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 4px;
+        cursor: default;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #c7c7c7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Modals -->
+
+    <!-- Helper -->
+
+    <!-- Main modal -->
+    <div
+      id="defaultModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full max-w-2xl h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Yardım Merkezi
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-toggle="defaultModal"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-2">
+            <h5 class="text-md font-semibold text-gray-900 dark:text-white">
+              Faydalı videolar
+            </h5>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Uygulama Nasıl Düzenlenir</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Arayüz Tasarlamak</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>İş Akışı Sekmesi</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Özellik Düzenleyici</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Kullanıcı Kaydı / Giriş Oluşturma</p>
+            </div>
+
+            <div class="flex items-center">
+              <img
+                src="./assets/helper-video-logo.png"
+                class="w-20 h-12 object-contain"
+                alt=""
+              />
+              <p>Uygulamayı Nasıl Yayınlayabilirim</p>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600"
+          >
+            <button
+              data-modal-toggle="defaultModal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+            >
+              Kapat
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END Modals -->
+
+    <!-- drawer component -->
+    <div
+      id="drawer-right-example"
+      class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800"
+      tabindex="-1"
+      aria-labelledby="drawer-right-label"
+    >
+      <div class="text-red-500 text-3xl text-center">Notlar</div>
+      <button
+        type="button"
+        data-drawer-dismiss="drawer-right-example"
+        aria-controls="drawer-right-example"
+        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+
+      <div class="mb-4">
+        <p class="text-gray-500 text-center mt-5">Tarih/Saat</p>
+      </div>
+
+      <div class="p-3">
+        <form>
+          <div
+            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
+          >
+            <div
+              class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600"
+            >
+              <div
+                class="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600"
+              >
+                <div class="flex items-center space-x-1 sm:pr-4">
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Attach file</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Embed map</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Upload image</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Format code</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Add emoji</span>
+                  </button>
+                </div>
+                <div class="flex flex-wrap items-center space-x-1 sm:pl-4">
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Add list</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Settings</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Timeline</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Download</span>
+                  </button>
+                </div>
+              </div>
+              <button
+                type="button"
+                data-tooltip-target="tooltip-fullscreen"
+                class="p-2 text-gray-500 rounded cursor-pointer sm:ml-auto hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 11-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="sr-only">Full screen</span>
+              </button>
+              <div
+                id="tooltip-fullscreen"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+              >
+                Show full screen
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+            </div>
+            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+              <label for="editor" class="sr-only">Publish post</label>
+              <textarea
+                id="editor"
+                rows="15"
+                class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                placeholder=""
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <button
+              data-drawer-dismiss="drawer-right-example"
+              aria-controls="drawer-right-example"
+              type="button"
+              class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded w-40 border border-blue-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Kapat
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Workflow modal -->
+    <div
+      id="workflowModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full max-w-2xl h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-[#283032] text-white"
+          >
+            <h3
+              class="text-md font-semibold text-gray-900 dark:text-white text-white"
+            >
+              Sayfa yüklendiği zaman yapılacak işlemler
+            </h3>
+
+            <!-- header -->
+            <div class="flex items-center space-x-4">
+              <i
+                class="fa-solid fa-circle-question text-xl cursor-pointer text-gray-400 hover:text-gray-300"
+              ></i>
+              <i
+                class="fa-regular fa-comment text-xl text-gray-500 cursor-pointer text-gray-400 hover:text-gray-300"
+                onclick="popupWindow('./part/notes.html', 'Notlar', 600, 500 )"
+              ></i>
+
+              <button
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm inline-flex dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-toggle="workflowModal"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="sr-only">Close modal</span>
+              </button>
+            </div>
+            <!-- END Header -->
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-2 bg-[#5F6568] -mt-1">
+            <div class="flex justify-between items-center">
+              <label
+                for="countries"
+                class="block mb-2 text-sm text-gray-500 font-semibold dark:text-white w-1/4"
+                >Renk</label
+              >
+
+              <select
+                id="countries"
+                class="text-gray-500 font-medium w-3/4 bg-[#525759] border border-[#525759] text-white text-sm rounded-lg focus:ring-[#525759] focus:border-[#525759] block w-full p-2.5"
+              >
+                <option selected>Renk Seçiniz</option>
+              </select>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <label
+                for="countries"
+                class="block mb-2 text-sm font-medium text-gray-300 font-semibold dark:text-white w-1/4"
+                >İş Akışı Klasörü</label
+              >
+
+              <select
+                id="countries"
+                class="w-3/4 bg-[#525759] border border-[#525759] text-white text-sm rounded-lg focus:ring-[#525759] focus:border-[#525759] block w-full p-2.5"
+              >
+                <option selected>Renk Seçiniz</option>
+              </select>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <label
+                for="countries"
+                class="block mb-2 text-sm font-medium text-gray-300 font-semibold dark:text-white w-1/4"
+                >Olay Ekle</label
+              >
+
+              <input
+                type="text"
+                id="text"
+                class="w-3/4 bg-[#525759] border border-[#525759] text-white text-sm rounded-lg focus:ring-[#525759] focus:border-[#525759] block w-full p-2.5"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END Modals -->
+
+    <div class="flex border-b border-gray-300 h-10">
+      <!-- Logo -->
+      <div
+        class="cursor-pointer border-r border-r-3 border-gray-500 flex content-center"
+        style="display: flex; align-items: center"
+      >
+        <img
+          src="./assets/logo_11.png"
+          class="w-24 object-contain"
+          alt=""/>
+      </div>
+
+      <!-- search -->
+      <div
+        class="relative 2xl:w-2/12 border-r border-r-3 border-gray-500 flex content-center"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Sayfa: Anasayfa"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Sayfalar -->
+      <div
+        class="relative 2xl:w-2/12 border-r border-r-3 border-gray-500 flex content-center"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Anasayfa"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Düzenle -->
+      <div
+        class="w-1/12 border-r border-r-1 cursor-pointer flex justify-items-between content-center h-10 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <span class="text-xs font-semibold pl-2 p-1 w-full text-gray-500"
+          >Düzenle</span
+        >
+        <i
+          class="fa-solid fa-arrow-up-long -rotate-45 pt-1 pr-1 text-gray-500"
+        ></i>
+      </div>
+
+      <!-- Grid & Bordes -->
+      <div
+        class="relative 2xl:w-1/12 border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Izgara & Kenarlar"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Hazırlıklar -->
+      <div
+        class="relative w-1/12 border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <input
+          type="text"
+          class="border-gray-300 p-1 text-xs text-gray-500 font-semibold w-full"
+          value="Hazırlıklar"
+        />
+        <i class="fa-solid fa-caret-down absolute right-2 text-gray-500"></i>
+      </div>
+
+      <!-- Bileşenler -->
+      <div
+        class="relative w-1/12 cursor-pointer border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <span class="text-xs font-semibold pl-8 p-1 w-full text-gray-500"
+          >Bileşenler</span
+        >
+        <i
+          class="fa-solid fa-cube absolute left-1 text-gray-500 text-md font-semibold"
+        ></i>
+      </div>
+
+      <!-- Rotate Left -->
+      <div
+        class="relative cursor-pointer border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <i
+          class="fa-solid fa-rotate-left text-gray-500 text-md font-semibold p-1 px-2"
+        ></i>
+        <i
+          class="fa-solid fa-rotate-right text-gray-300 text-md font-semibold p-1 px-2"
+        ></i>
+      </div>
+
+      <!-- Search  -->
+      <div
+        class="relative cursor-pointer border-r border-r-3 border-gray-500"
+        style="display: flex; align-items: center"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass text-gray-500 text-md font-semibold p-1 px-2"
+        ></i>
+      </div>
+
+      <!-- Bitir ve  yayınla -->
+      <div
+        class="relative cursor-pointer w-1/12 text-center bg-[#0205D3] m-0 p-0"
+        style="display: flex; align-items: center"
+      >
+        <span
+          class="text-sm 2xl:text-medium px-2 w-full text-gray-500 text-white bg-[#0205D3]"
+          >Bitir ve Yayınla
+        </span>
+      </div>
+
+      <!-- Bitir ve  yayınla -->
+      <div
+        class="relative cursor-pointer w-1/12 text-center m-0 p-0 group hover:bg-[#0205d3] ml-0.5"
+        style="display: flex; align-items: center"
+      >
+        <span
+          class="2xl:text-medium px-2 w-full text-blue-500 group-hover:text-white"
+          >Önizleme
+        </span>
+      </div>
+
+      <!-- Sorular, Hesap -->
+      <div
+        class="w-1/12 cursor-pointer border-gray-500 flex justify-items-end"
+        style="display: flex; justify-content: end; align-items: center"
+      >
+        <div>
+          <i
+            data-modal-toggle="defaultModal"
+            class="fa-regular fa-circle-question text-gray-500 font-semibold p-1 px-2 text-xl"
+          ></i>
+          <i
+            class="fa-solid fa-circle-user text-gray-500 text-md font-semibold p-1 px-2 text-xl"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <!-- Main Menu-->
+      <div class="w-20 h-screen border border-gray-300">
+        <div class="border-b-1 border-gray-300 border-b">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 text-gray-500 hover:border-blue-500 hover:text-blue-500"
+            onclick="window.open('work.html', '_self')"
+          >
+            <i class="fa-solid fa-pen-ruler text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Tasarım</span>
+          </div>
+        </div>
+
+        <div class="border-b-1 border-gray-300 border-b">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+            onclick="window.open('workflow.html', '_self')"
+          >
+            <i class="fa-solid fa-network-wired text-lg mt-2"></i>
+            <span class="text-sm font-semibold">İş Akışı</span>
+          </div>
+        </div>
+
+        <div class="border-b-1 border-gray-300 border-b">
+          <div
+            onclick="window.open('data.html', '_self')"
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-solid fa-database text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Veriler</span>
+          </div>
+        </div>
+        <div
+          class="border-b-1 border-gray-300 border-b"
+          onclick="window.open('styles.html', '_self')"
+        >
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 border-blue-500 text-blue-500"
+          >
+            <i class="fa-solid fa-paintbrush text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Stiller</span>
+          </div>
+        </div>
+
+        <div class="border-b-1 border-gray-300 border-b" onclick="window.open('plugins.html', '_self')">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-solid fa-plug-circle-bolt text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Eklentiler</span>
+          </div>
+        </div>
+        <div class="border-b-1 border-gray-300 border-b" onclick="window.open('settings.html', '_self')">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-solid fa-gear text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Ayarlar</span>
+          </div>
+        </div>
+        <div class="border-b-1 border-gray-300 border-b" onclick="window.open('logs.html', '_self')">
+          <div
+            class="flex flex-col items-center gap-y-2 border-l-4 hover:border-blue-500 text-gray-500 hover:text-blue-500"
+          >
+            <i class="fa-regular fa-note-sticky text-lg mt-2"></i>
+            <span class="text-sm font-semibold">Loglar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main  -->
+      <div class="w-9-12 p-3 w-full">
+        <!-- Tab-->
+        <div class="p-4 border border-gray-300">
+          <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+            <ul
+              class="flex flex-wrap -mb-px text-sm font-medium text-center"
+              id="myTab"
+              data-tabs-toggle="#myTabContent"
+              role="tablist"
+            >
+              <li class="mr-2" role="presentation">
+                <button
+                  class="inline-block p-4 rounded-t-lg border-b-2"
+                  id="profile-tab"
+                  data-tabs-target="#profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  Etiket Stilleri
+                </button>
+              </li>
+              <li class="mr-2" role="presentation">
+                <button
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="dashboard-tab"
+                  data-tabs-target="#dashboard"
+                  type="button"
+                  role="tab"
+                  aria-controls="dashboard"
+                  aria-selected="false"
+                >
+                  Stil Değerleri
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div id="myTabContent">
+            <div
+              class="hidden p-4 rounded-lg dark:bg-gray-800"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <!-- Öğe Stilleri-->
+              <div class="flex items-center justify-between">
+                <div class="flex space-x-10 items-center">
+                  <div class="flex items-center space-x-10">
+                    <label
+                      for="select_tag"
+                      class="block text-sm font-medium text-gray-900 dark:text-white w-28 font-bold"
+                      >Etiket Tipi</label
+                    >
+                    <select
+                      id="select_tag"
+                      class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option selected>Etiket seçiniz</option>
+                      <option value="x">Button</option>
+                      <option value="x">İnput</option>
+                    </select>
+                  </div>
+
+                  <div class="flex items-center space-x-10">
+                    <label
+                      for="select_tag"
+                      class="block text-sm font-medium text-gray-900 dark:text-white w-36 font-bold"
+                      >İsme Göre Ara</label
+                    >
+                    <input
+                      type="text"
+                      id="first_name"
+                      class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                  <div class="relative flex items-center">
+                    <button
+                      type="button"
+                      class="font-bold text-blue-600 py-2.5 pl-6 px-5 mr-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:ring-4 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 w-40"
+                    >
+                      Temayı Uygula
+                    </button>
+                    <i
+                      class="absolute left-3 fa-solid fa-paintbrush text-blue-600"
+                    ></i>
+                  </div>
+
+                  <div class="relative flex items-center justify-center">
+                    <button
+                      type="button"
+                      class="font-bold text-white py-2.5 pl-6 px-5 mr-2 text-sm font-medium text-gray-900 bg-blue-600 rounded-lg border border-blue-400 hover:bg-blue-500 hover:text-white focus:ring-4 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 w-40"
+                    >
+                      Stil Ekle
+                    </button>
+                    <i
+                      class="absolute left-8 fa-solid fa-plus text-white font-bold"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-between space-x-5 h-screen mt-5 border-t border-gray-300"
+              >
+                <!-- html öğeleri sol kısım -->
+                <div class="pb-2 px-2 overflow-y-auto h-4/6 w-1/3">
+                  <div
+                    class="flex items-center space-x-5 bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Uyarı
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Uyarı mesajı Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Tari/Saat
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Tarih/Saat Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Buton
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Buton Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Onay Kutusu
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Onay Kutusu Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Bağlantı
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Bağlantı Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Harita
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Harita Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      İnput
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      İnput Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Resim Yükleyici
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Resim Yükleyici Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Radio Düğmeleri
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Radio Düğmeleri Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Select Box
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Select Box Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Video
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Video Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Buton
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Buton Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Onay Kutusu
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Onay Kutusu Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Bağlantı
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Bağlantı Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Harita
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Harita Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      İnput
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      İnput Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Resim Yükleyici
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Resim Yükleyici Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Radio Düğmeleri
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Radio Düğmeleri Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Select Box
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Select Box Ayarları
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex items-center space-x-5 hover:bg-gray-50 py-2 px-5 cursor-pointer"
+                  >
+                    <p class="text-gray-500 text-sm font-semibold w-28">
+                      Video
+                    </p>
+                    <p class="font-semibold text-sm md:text-md">
+                      Video Ayarları
+                    </p>
+                  </div>
+                </div>
+
+                <!-- html öğeleri düzenle orta kısım -->
+                <div class="p-2 w-1/3">
+                  <div class="flex items-center justify-between">
+                    <input
+                      type="text"
+                      id="xx"
+                      class="w-4/5 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      value="Tarih/Saat"
+                      required
+                    />
+
+                    <div class="1/5 flex space-x-5">
+                      <i
+                        class="fa-solid fa-trash-can text-xl text-gray-400 hover:text-gray-700 cursor-pointer"
+                      ></i>
+                      <i
+                        class="fa-regular fa-comment text-xl text-gray-400 hover:text-gray-700 cursor-pointer"
+                        data-drawer-target="drawer-right-example"
+                        data-drawer-show="drawer-right-example"
+                        data-drawer-placement="right"
+                        aria-controls="drawer-right-example"
+                      ></i>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 border border-gray-300 h-24">
+                    <p class="font-bold text-black p-5 text-sm">
+                      ... beni düzelt...
+                    </p>
+                  </div>
+                </div>
+
+                <!--html öğelerini düzenle -->
+
+                <div class="p-2 w-1/3">
+                  <div
+                    class="mb-4 border-b border-gray-200 dark:border-gray-700"
+                  >
+                    <ul
+                      class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                      id="myTab"
+                      data-tabs-toggle="#myTabContent2"
+                      role="tablist"
+                    >
+                      <li class="mr-2" role="presentation">
+                        <button
+                          class="inline-block p-4 rounded-t-lg border-b-2"
+                          id="profile-tab-1"
+                          data-tabs-target="#profile-1"
+                          type="button"
+                          role="tab"
+                          aria-controls="profile"
+                          aria-selected="false"
+                        >
+                          Dış Görünüş
+                        </button>
+                      </li>
+                      <li class="mr-2" role="presentation">
+                        <button
+                          class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                          id="dashboard-tab-1"
+                          data-tabs-target="#dashboard-1"
+                          type="button"
+                          role="tab"
+                          aria-controls="dashboard-1"
+                          aria-selected="false"
+                        >
+                          Düzen
+                        </button>
+                      </li>
+                      <li class="mr-2" role="presentation">
+                        <button
+                          class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                          id="settings-tab-1"
+                          data-tabs-target="#settings-1"
+                          type="button"
+                          role="tab"
+                          aria-controls="settings-1"
+                          aria-selected="false"
+                        >
+                          Koşul
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="myTabContent2" class="h-screen">
+                    <div
+                      class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800 overflow-y-auto h-3/6"
+                      id="profile-1"
+                      role="tabpanel"
+                      aria-labelledby="profile-tab-1"
+                    >
+                      <div class="flex items-center justify-between space-x-3">
+                        <select
+                          id="a"
+                          class="text-gray-500 font-medium font-medium w-2/3 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        >
+                          <option selected>Arial</option>
+                        </select>
+
+                        <select
+                          id="a"
+                          class="w-1/3 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        >
+                          <option selected>400</option>
+                        </select>
+                      </div>
+
+                      <div
+                        class="flex items-center justify-between space-x-3 mt-2"
+                      >
+                        <select
+                          id="a"
+                          class="text-gray-500 font-medium w-1/2 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        >
+                          <option selected>14 piksel</option>
+                        </select>
+
+                        <div class="w-1/2 bg-white flex justify-around py-2">
+                          <i
+                            class="fa-solid fa-align-left text-blue-500 cursor-pointer"
+                          ></i>
+                          <i
+                            class="fa-solid fa-align-center cursor-pointer"
+                          ></i>
+                          <i class="fa-solid fa-align-right cursor-pointer"></i>
+                        </div>
+
+                        <div class="w-1/2 bg-white flex justify-around py-2">
+                          <i
+                            class="fa-solid fa-b text-blue-500 cursor-pointer"
+                          ></i>
+                          <i class="fa-solid fa-italic cursor-pointer"></i>
+                          <i class="fa-solid fa-underline cursor-pointer"></i>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center mt-3">
+                        <div class="w-32">
+                          <span class="text-gray-500 text-md font-semibold"
+                            >Renk</span
+                          >
+                        </div>
+
+                        <div
+                          class="bg-white py-2 w-full px-2 flex items-center space-x-3"
+                        >
+                          <input type="color" />
+                          <span class="text-gray-400 text-md">#5CB358</span>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex items-center justify-between mt-2 space-x-3 mb-5"
+                      >
+                        <div class="w-1/2">
+                          <label
+                            for="countries"
+                            class="block mb-2 text-sm text-gray-500 dark:text-white font-semibold"
+                            >Kelime aralığı</label
+                          >
+                          <select
+                            id="countries"
+                            class="text-gray-500 font-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          >
+                            <option selected>0</option>
+                          </select>
+                        </div>
+
+                        <div class="w-1/2">
+                          <label
+                            for="countries"
+                            class="block mb-2 text-sm text-gray-500 dark:text-white font-semibold"
+                            >Satır Aralığı</label
+                          >
+                          <select
+                            id="countries"
+                            class="text-gray-500 font-medium bg-white border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          >
+                            <option selected>1</option>
+                          </select>
+                        </div>
+
+                        <div class="w-1/2">
+                          <label
+                            for="countries"
+                            class="block mb-2 text-sm text-gray-500 dark:text-white font-semibold"
+                            >Harf boşluğu</label
+                          >
+                          <select
+                            id="countries"
+                            class="text-gray-500 font-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          >
+                            <option selected>0</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div
+                        class="mt-2 border-t border-gray-300 border-b py-5 flex justify-between items-center"
+                      >
+                        <p class="font-semibold text-sm text-gray-500">
+                          Metni dikey olarak ortala
+                        </p>
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                      </div>
+
+                      <div class="py-4 border-b border-gray-300">
+                        <div class="flex items-center justify-between">
+                          <p class="w-1/2 text-gray-500 font-semibold text-sm">
+                            Arka plan stili
+                          </p>
+                          <select
+                            id="countries"
+                            class="text-gray-500 font-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          >
+                            <option selected>Düz Renk</option>
+                          </select>
+                        </div>
+
+                        <div class="flex items-center mt-3">
+                          <div class="w-1/2">
+                            <span
+                              class="text-md text-gray-500 font-semibold text-sm"
+                              >Renk</span
+                            >
+                          </div>
+
+                          <div
+                            class="bg-white py-2 w-full px-2 flex items-center space-x-3"
+                          >
+                            <input type="color" />
+                            <span class="text-gray-400 text-md">#5CB358</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="border-gray-300 border-b py-5">
+                        <div class="flex justify-between items-center mb-4">
+                          <p class="font-semibold text-sm text-gray-500">
+                            Her sınırı bağımsız olarak tanımlayın
+                          </p>
+                          <input
+                            id="default-checkbox"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                        </div>
+
+                        <div
+                          class="flex items-center justify-between space-x-10"
+                        >
+                          <div class="w-1/2">
+                            <p class="text-gray-500 text-sm font-semibold mb-2">
+                              Kenarlık stili - tüm kenarlıklar
+                            </p>
+                            <select
+                              id="countries"
+                              class="text-gray-500 font-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            >
+                              <option selected>Hiçbiri</option>
+                            </select>
+                          </div>
+
+                          <div class="w-1/2">
+                            <p class="text-gray-500 text-sm font-semibold mb-2">
+                              Yuvarlaklık
+                            </p>
+                            <select
+                              id="countries"
+                              class="text-gray-500 font-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            >
+                              <option selected>Hiçbiri</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="mt-2 border-b py-5 flex justify-between items-center"
+                      >
+                        <p class="font-semibold text-sm text-gray-500">
+                          Metin gölgesini göster
+                        </p>
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                      </div>
+
+                      <div
+                        class="mt-2 border-b py-5 flex justify-between items-center"
+                      >
+                        <p class="font-semibold text-sm text-gray-500 w-1/2">
+                          Gölge Stili
+                        </p>
+                        <select
+                          id="countries"
+                          class="text-gray-500 font-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        >
+                          <option selected>Hiçbiri</option>
+                          <option value="">Başlangıç</option>
+                          <option value="">Ek</option>
+                        </select>
+                      </div>
+
+                      <div class="mt-2">
+                        <select
+                          id="countries"
+                          class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray-500 font-medium"
+                        >
+                          <option selected>
+                            Yeni bir geçiş tanımlamak için bir özellik seçin
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div
+                      class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+                      id="dashboard-1"
+                      role="tabpanel"
+                      aria-labelledby="dashboard-tab-1"
+                    >
+                      <!-- Düzen -->
+                      <div>
+                        <p class="text-sm font-semibold text-gray-500 mb-4">
+                          İç Boşluklar
+                        </p>
+
+                        <div
+                          class="flex items-center justify-between space-x-3"
+                        >
+                          <div>
+                            <p class="text-gray-500 text-sm font-semibold mb-2">
+                              Yukarı
+                            </p>
+                            <input
+                              type="text"
+                              placeholder="12"
+                              class="text-gray-500 font-semibold bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            />
+                          </div>
+
+                          <div>
+                            <p class="text-gray-500 text-sm font-semibold mb-2">
+                              Aşağı
+                            </p>
+                            <input
+                              type="text"
+                              placeholder="12"
+                              class="text-gray-500 font-semibold bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            />
+                          </div>
+
+                          <div>
+                            <p class="text-gray-500 text-sm font-semibold mb-2">
+                              Sol
+                            </p>
+                            <input
+                              type="text"
+                              placeholder="12"
+                              class="text-gray-500 font-semibold bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            />
+                          </div>
+
+                          <div>
+                            <p class="text-gray-500 text-sm font-semibold mb-2">
+                              Sağ
+                            </p>
+                            <input
+                              type="text"
+                              placeholder="12"
+                              class="text-gray-500 font-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+                      id="settings-1"
+                      role="tabpanel"
+                      aria-labelledby="settings-tab-1"
+                    >
+                      <div class="px-6 flex items-center justify-center">
+                        <div class="relative flex items-center">
+                          <button
+                            type="button"
+                            class="font-semibold py-2.5 px-8 mr-2 text-sm text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                          >
+                            Başka bir koşul tanımlayın
+                          </button>
+                          <i
+                            class="absolute left-3 fa-solid fa-plus z-10 text-gray-500"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+                      id="contacts-1"
+                      role="tabpanel"
+                      aria-labelledby="contacts-tab-1"
+                    >
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        This is some placeholder content the
+                        <strong
+                          class="font-medium text-gray-800 dark:text-white"
+                          >Contacts tab's associated content</strong
+                        >. Clicking another tab will toggle the visibility of
+                        this one for the next. The tab JavaScript swaps classes
+                        to control the content visibility and styling.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden p-4 bg-white rounded-lg dark:bg-gray-800"
+              id="dashboard"
+              role="tabpanel"
+              aria-labelledby="dashboard-tab"
+            >
+              <!-- Stil Değeri -->
+              <div class="p-2">
+                <div class="border-gray-300 border-b text-md">
+                  <p class="text-black text-sm font-semibold pb-3">
+                    Uygulamanızın varsayılan yazi tipini ayarlayın
+                  </p>
+                </div>
+
+                <div>
+                  <div class="py-4 flex justify-between">
+                    <p class="text-black text-sm font-semibold">
+                      Uygulama Yazı Tipi - Stillerde uygulama yazı tipi olarak
+                      tüm öğelere uygulanır
+                    </p>
+                    <select
+                      id=""
+                      class="w-44 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option>Open Sans</option>
+                      <option>Arial</option>
+                    </select>
+                  </div>
+
+                  <p
+                    class="text-black text-sm font-semibold border-gray-300 border-b pb-3"
+                  >
+                    Uygulamanızın renk değerlerini ayarlayın
+                  </p>
+                </div>
+
+                <div class="py-3">
+                  <!-- item -->
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="text-black text-sm font-semibold">
+                      Birincil - Tıklanabilir öğeler için herhangi bir birincil
+                      düğme, eylem veya fareyle üzerine gelme işlemi için renk.
+                    </p>
+                    <div
+                      class="flex justify-around items-center space-x-3 boder-gray-300 border p-2 w-40"
+                    >
+                      <span>#0205D3</span>
+                      <div class="w-4 h-4 bg-blue-800"></div>
+                    </div>
+                  </div>
+                  <!-- item end -->
+
+                  <!-- item -->
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="text-black text-sm font-semibold">
+                      Birincil kontrast - Birincil düğmedeki metin ve simgelerin
+                      rengi.
+                    </p>
+                    <div
+                      class="flex justify-around items-center space-x-3 boder-gray-300 border p-2 w-40"
+                    >
+                      <span>#0205D3</span>
+                      <div class="w-4 h-4 bg-blue-800"></div>
+                    </div>
+                  </div>
+                  <!-- item end -->
+
+                  <!-- item -->
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="text-black text-sm font-semibold">
+                      Metin - Statik metin ve simgelerin rengi.
+                    </p>
+                    <div
+                      class="flex justify-around items-center space-x-3 boder-gray-300 border p-2 w-40"
+                    >
+                      <span>#0205D3</span>
+                      <div class="w-4 h-4 bg-blue-800"></div>
+                    </div>
+                  </div>
+                  <!-- item end -->
+
+                  <!-- item -->
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="text-black text-sm font-semibold">
+                      Yüzey - Konteynerler için arka plan rengi.
+                    </p>
+                    <div
+                      class="flex justify-around items-center space-x-3 boder-gray-300 border p-2 w-40"
+                    >
+                      <span>#0205D3</span>
+                      <div class="w-4 h-4 bg-blue-800"></div>
+                    </div>
+                  </div>
+                  <!-- item end -->
+                  <!-- item -->
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="text-black text-sm font-semibold">
+                      Arka Plan - Sayfalar ve sayfa bölümleri için arka plan
+                      rengi.
+                    </p>
+                    <div
+                      class="flex justify-around items-center space-x-3 boder-gray-300 border p-2 w-40"
+                    >
+                      <span>#0205D3</span>
+                      <div class="w-4 h-4 bg-blue-800"></div>
+                    </div>
+                  </div>
+                  <!-- item end -->
+                </div>
+              </div>
+
+              <!-- Stil değeri end -->
+            </div>
+          </div>
+        </div>
+        <!-- End Tab-->
+      </div>
+      <!-- End Main-->
+    </div>
+  </body>
+  <script src="./dist/flowbite.js"></script>
+
+  <script>
+    function popupWindow(url, title, w, h) {
+      var left = screen.width / 2 - w / 2;
+      var top = screen.height / 2 - h / 2;
+
+      return window.open(
+        url,
+        title,
+        "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" +
+          w +
+          ", height=" +
+          h +
+          ", top=" +
+          top +
+          ", left=" +
+          left
+      );
+    }
+  </script>
+</html>
